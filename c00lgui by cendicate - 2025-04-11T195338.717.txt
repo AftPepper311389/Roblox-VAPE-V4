@@ -1,0 +1,2761 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local culgui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Page1 = Instance.new("Frame")
+local AdminCommandsGuis = Instance.new("Frame")
+local iOrb = Instance.new("TextButton")
+local KohlsAdmin = Instance.new("TextButton")
+local NexPluviaAdmin = Instance.new("TextButton")
+local Empty = Instance.new("TextButton")
+local KillGui = Instance.new("TextButton")
+local SilentExecutor = Instance.new("TextButton")
+local Nilizer = Instance.new("TextButton")
+local RemsoAdmin = Instance.new("TextButton")
+local XAdmin = Instance.new("TextButton")
+local LagGui = Instance.new("TextButton")
+local GlobalMessageGui = Instance.new("TextButton")
+local Empty_2 = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local ServerDestruction = Instance.new("Frame")
+local Flood = Instance.new("TextButton")
+local ClearTerrain = Instance.new("TextButton")
+local ApocTroll = Instance.new("TextButton")
+local SetSkybox = Instance.new("TextButton")
+local UnanchorAll = Instance.new("TextButton")
+local DecalSpam = Instance.new("TextButton")
+local ForceTeleport = Instance.new("TextButton")
+local ClearWorkspace = Instance.new("TextButton")
+local KillAll = Instance.new("TextButton")
+local KickAll = Instance.new("TextButton")
+local CreateBaseplate = Instance.new("TextButton")
+local Intimidation = Instance.new("TextButton")
+local Title_2 = Instance.new("TextLabel")
+local Page2 = Instance.new("Frame")
+local GearTools = Instance.new("Frame")
+local CustomGear = Instance.new("TextButton")
+local StamperTools = Instance.new("TextButton")
+local ToolStealer = Instance.new("TextButton")
+local Empty_3 = Instance.new("TextButton")
+local Minigun = Instance.new("TextButton")
+local GodLaser = Instance.new("TextButton")
+local DrawTool = Instance.new("TextButton")
+local Empty_4 = Instance.new("TextButton")
+local Empty_5 = Instance.new("TextButton")
+local Empty_6 = Instance.new("TextButton")
+local Empty_7 = Instance.new("TextButton")
+local Empty_8 = Instance.new("TextButton")
+local Title_3 = Instance.new("TextLabel")
+local WeaponScripts = Instance.new("Frame")
+local Drage = Instance.new("TextButton")
+local DualBlades = Instance.new("TextButton")
+local Eyelaser = Instance.new("TextButton")
+local Knife = Instance.new("TextButton")
+local Lance = Instance.new("TextButton")
+local Lightsaber = Instance.new("TextButton")
+local MasterHand = Instance.new("TextButton")
+local Plane = Instance.new("TextButton")
+local Snowball = Instance.new("TextButton")
+local Staff = Instance.new("TextButton")
+local Empty_9 = Instance.new("TextButton")
+local TechnoGauntlet = Instance.new("TextButton")
+local Wand = Instance.new("TextButton")
+local xBow = Instance.new("TextButton")
+local Title_4 = Instance.new("TextLabel")
+local Page3 = Instance.new("Frame")
+local LocalPlayer = Instance.new("Frame")
+local AntiRobloxian = Instance.new("TextButton")
+local BillboardGui = Instance.new("TextButton")
+local ChangeName = Instance.new("TextButton")
+local ChickenArms = Instance.new("TextButton")
+local DiscoCharacter = Instance.new("TextButton")
+local DominusGhost = Instance.new("TextButton")
+local FloatingPad = Instance.new("TextButton")
+local HeadShake = Instance.new("TextButton")
+local Heal = Instance.new("TextButton")
+local MeshDisco = Instance.new("TextButton")
+local SetWalkspeed = Instance.new("TextButton")
+local Empty_10 = Instance.new("TextButton")
+local Empty_11 = Instance.new("TextButton")
+local Empty_12 = Instance.new("TextButton")
+local Title_5 = Instance.new("TextLabel")
+local Misc = Instance.new("Frame")
+local BecomeOwnerinPersonalServer = Instance.new("TextButton")
+local DiscoFog = Instance.new("TextButton")
+local FencingRestore = Instance.new("TextButton")
+local LeaderstatAdd = Instance.new("TextButton")
+local LeaderstatChange = Instance.new("TextButton")
+local PlayMusic = Instance.new("TextButton")
+local RestoreSkybox = Instance.new("TextButton")
+local StealPlayerPoints = Instance.new("TextButton")
+local Empty_13 = Instance.new("TextButton")
+local Empty_14 = Instance.new("TextButton")
+local Empty_15 = Instance.new("TextButton")
+local Empty_16 = Instance.new("TextButton")
+local Title_6 = Instance.new("TextLabel")
+local Page4 = Instance.new("Frame")
+local PresetMusicIDs = Instance.new("Frame")
+local ChopSuey = Instance.new("TextButton")
+local ElectroSp00k = Instance.new("TextButton")
+local Scream = Instance.new("TextButton")
+local Wonga = Instance.new("TextButton")
+local Empty_17 = Instance.new("TextButton")
+local Empty_18 = Instance.new("TextButton")
+local Empty_19 = Instance.new("TextButton")
+local Empty_20 = Instance.new("TextButton")
+local Empty_21 = Instance.new("TextButton")
+local Empty_22 = Instance.new("TextButton")
+local Empty_23 = Instance.new("TextButton")
+local Empty_24 = Instance.new("TextButton")
+local Title_7 = Instance.new("TextLabel")
+local PresetSkyboxDecalIDs = Instance.new("Frame")
+local Teamc00lkiddLogo1 = Instance.new("TextButton")
+local Teamc00lkiddLogo2 = Instance.new("TextButton")
+local Thomas = Instance.new("TextButton")
+local c00lkidd = Instance.new("TextButton")
+local teamskrubl0rd = Instance.new("TextButton")
+local Empty_25 = Instance.new("TextButton")
+local Empty_26 = Instance.new("TextButton")
+local Empty_27 = Instance.new("TextButton")
+local Empty_28 = Instance.new("TextButton")
+local Empty_29 = Instance.new("TextButton")
+local Empty_30 = Instance.new("TextButton")
+local Empty_31 = Instance.new("TextButton")
+local Empty_32 = Instance.new("TextButton")
+local Empty_33 = Instance.new("TextButton")
+local Title_8 = Instance.new("TextLabel")
+local Page5 = Instance.new("Frame")
+local End = Instance.new("Frame")
+local Empty_34 = Instance.new("TextLabel")
+local PresetGearIDs = Instance.new("Frame")
+local Airstrike = Instance.new("TextButton")
+local DualDarkhearts = Instance.new("TextButton")
+local DualVenomshanks = Instance.new("TextButton")
+local GhostfireSword = Instance.new("TextButton")
+local GravityCoil = Instance.new("TextButton")
+local Hyperbike = Instance.new("TextButton")
+local Icedagger = Instance.new("TextButton")
+local LinkedSword = Instance.new("TextButton")
+local Empty_35 = Instance.new("TextButton")
+local Empty_36 = Instance.new("TextButton")
+local Empty_37 = Instance.new("TextButton")
+local Empty_38 = Instance.new("TextButton")
+local Empty_39 = Instance.new("TextButton")
+local Settings = Instance.new("Frame")
+local Page1_2 = Instance.new("Frame")
+local BillboardGuiText = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local Title_9 = Instance.new("TextLabel")
+local CustomGearID = Instance.new("Frame")
+local TextBox_2 = Instance.new("TextBox")
+local Title_10 = Instance.new("TextLabel")
+local God = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local Title_11 = Instance.new("TextLabel")
+local Invisibility = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+local Title_12 = Instance.new("TextLabel")
+local MusicID = Instance.new("Frame")
+local TextBox_3 = Instance.new("TextBox")
+local Title_13 = Instance.new("TextLabel")
+local MusicPitch = Instance.new("Frame")
+local TextBox_4 = Instance.new("TextBox")
+local Title_14 = Instance.new("TextLabel")
+local PlaceID = Instance.new("Frame")
+local TextBox_5 = Instance.new("TextBox")
+local Title_15 = Instance.new("TextLabel")
+local SkyboxDecalID = Instance.new("Frame")
+local TextBox_6 = Instance.new("TextBox")
+local Title_16 = Instance.new("TextLabel")
+local Page2_2 = Instance.new("Frame")
+local AntiRobloxianRange = Instance.new("Frame")
+local TextBox_7 = Instance.new("TextBox")
+local Title_17 = Instance.new("TextLabel")
+local BillboardGuiColor = Instance.new("Frame")
+local TextBox1 = Instance.new("TextBox")
+local TextBox2 = Instance.new("TextBox")
+local TextBox3 = Instance.new("TextBox")
+local Title_18 = Instance.new("TextLabel")
+local ChatSpamText = Instance.new("Frame")
+local TextBox_8 = Instance.new("TextBox")
+local Title_19 = Instance.new("TextLabel")
+local LeaderstatAmount = Instance.new("Frame")
+local TextBox_9 = Instance.new("TextBox")
+local Title_20 = Instance.new("TextLabel")
+local LeaderstatName = Instance.new("Frame")
+local TextBox_10 = Instance.new("TextBox")
+local Title_21 = Instance.new("TextLabel")
+local NameBox = Instance.new("Frame")
+local TextBox_11 = Instance.new("TextBox")
+local Title_22 = Instance.new("TextLabel")
+local WalkspeedAmount = Instance.new("Frame")
+local TextBox_12 = Instance.new("TextBox")
+local Title_23 = Instance.new("TextLabel")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local SettingsButton = Instance.new("TextButton")
+local Title_24 = Instance.new("TextLabel")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local Title_25 = Instance.new("TextLabel")
+local CloseOpen = Instance.new("TextButton")
+
+--Properties:
+
+culgui.Name = "culgui"
+culgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = culgui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0, 3, 0.300000012, 0)
+Frame.Size = UDim2.new(0, 300, 0, 400)
+
+Page1.Name = "Page1"
+Page1.Parent = Frame
+Page1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page1.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page1.BorderSizePixel = 3
+Page1.Position = UDim2.new(0, 0, 0, 83)
+Page1.Size = UDim2.new(1, 0, 1, -106)
+Page1.ZIndex = 2
+
+AdminCommandsGuis.Name = "Admin Commands/Guis"
+AdminCommandsGuis.Parent = Page1
+AdminCommandsGuis.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AdminCommandsGuis.BorderColor3 = Color3.fromRGB(255, 0, 0)
+AdminCommandsGuis.BorderSizePixel = 3
+AdminCommandsGuis.Position = UDim2.new(0.5, 3, 0, 0)
+AdminCommandsGuis.Size = UDim2.new(0.5, -3, 1, 0)
+AdminCommandsGuis.ZIndex = 2
+
+iOrb.Name = "iOrb"
+iOrb.Parent = AdminCommandsGuis
+iOrb.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+iOrb.BorderColor3 = Color3.fromRGB(255, 0, 0)
+iOrb.BorderSizePixel = 3
+iOrb.Position = UDim2.new(0, 0, 0, 33)
+iOrb.Size = UDim2.new(0.5, 0, 0, 30)
+iOrb.ZIndex = 2
+iOrb.Font = Enum.Font.SourceSans
+iOrb.Text = "i0rb"
+iOrb.TextColor3 = Color3.fromRGB(255, 255, 255)
+iOrb.TextSize = 14.000
+
+KohlsAdmin.Name = "Kohls Admin"
+KohlsAdmin.Parent = AdminCommandsGuis
+KohlsAdmin.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KohlsAdmin.BorderColor3 = Color3.fromRGB(255, 0, 0)
+KohlsAdmin.BorderSizePixel = 3
+KohlsAdmin.Position = UDim2.new(0.5, 3, 0, 33)
+KohlsAdmin.Size = UDim2.new(0.5, -3, 0, 30)
+KohlsAdmin.ZIndex = 2
+KohlsAdmin.Font = Enum.Font.SourceSans
+KohlsAdmin.Text = "Scrub's Admin"
+KohlsAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+KohlsAdmin.TextSize = 14.000
+KohlsAdmin.TextWrapped = true
+
+NexPluviaAdmin.Name = "Nex Pluvia Admin"
+NexPluviaAdmin.Parent = AdminCommandsGuis
+NexPluviaAdmin.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NexPluviaAdmin.BorderColor3 = Color3.fromRGB(255, 0, 0)
+NexPluviaAdmin.BorderSizePixel = 3
+NexPluviaAdmin.Position = UDim2.new(0, 0, 0, 66)
+NexPluviaAdmin.Size = UDim2.new(0.5, 0, 0, 30)
+NexPluviaAdmin.ZIndex = 2
+NexPluviaAdmin.Font = Enum.Font.SourceSans
+NexPluviaAdmin.Text = "Nex Pluvia Admin"
+NexPluviaAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+NexPluviaAdmin.TextSize = 14.000
+NexPluviaAdmin.TextWrapped = true
+
+Empty.Name = "Empty"
+Empty.Parent = AdminCommandsGuis
+Empty.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty.BorderSizePixel = 3
+Empty.Position = UDim2.new(0.5, 3, 0, 66)
+Empty.Size = UDim2.new(0.5, -3, 0, 30)
+Empty.ZIndex = 2
+Empty.Font = Enum.Font.SourceSans
+Empty.Text = "Empty"
+Empty.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty.TextSize = 14.000
+
+KillGui.Name = "Kill Gui"
+KillGui.Parent = AdminCommandsGuis
+KillGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KillGui.BorderColor3 = Color3.fromRGB(255, 0, 0)
+KillGui.BorderSizePixel = 3
+KillGui.Position = UDim2.new(0, 0, 0, 99)
+KillGui.Size = UDim2.new(0.5, 0, 0, 30)
+KillGui.ZIndex = 2
+KillGui.Font = Enum.Font.SourceSans
+KillGui.Text = "Kill Gui"
+KillGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillGui.TextSize = 14.000
+
+SilentExecutor.Name = "Silent Executor"
+SilentExecutor.Parent = AdminCommandsGuis
+SilentExecutor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SilentExecutor.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SilentExecutor.BorderSizePixel = 3
+SilentExecutor.Position = UDim2.new(0.5, 3, 0, 99)
+SilentExecutor.Size = UDim2.new(0.5, -3, 0, 30)
+SilentExecutor.ZIndex = 2
+SilentExecutor.Font = Enum.Font.SourceSans
+SilentExecutor.Text = "Silent Executor"
+SilentExecutor.TextColor3 = Color3.fromRGB(255, 255, 255)
+SilentExecutor.TextSize = 14.000
+SilentExecutor.TextWrapped = true
+
+Nilizer.Name = "Nilizer"
+Nilizer.Parent = AdminCommandsGuis
+Nilizer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Nilizer.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Nilizer.BorderSizePixel = 3
+Nilizer.Position = UDim2.new(0, 0, 0, 132)
+Nilizer.Size = UDim2.new(0.5, 0, 0, 30)
+Nilizer.ZIndex = 2
+Nilizer.Font = Enum.Font.SourceSans
+Nilizer.Text = "Nilizer"
+Nilizer.TextColor3 = Color3.fromRGB(255, 255, 255)
+Nilizer.TextSize = 14.000
+
+RemsoAdmin.Name = "Remso Admin"
+RemsoAdmin.Parent = AdminCommandsGuis
+RemsoAdmin.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RemsoAdmin.BorderColor3 = Color3.fromRGB(255, 0, 0)
+RemsoAdmin.BorderSizePixel = 3
+RemsoAdmin.Position = UDim2.new(0.5, 3, 0, 132)
+RemsoAdmin.Size = UDim2.new(0.5, -3, 0, 30)
+RemsoAdmin.ZIndex = 2
+RemsoAdmin.Font = Enum.Font.SourceSans
+RemsoAdmin.Text = "Remso Admin"
+RemsoAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+RemsoAdmin.TextSize = 14.000
+RemsoAdmin.TextWrapped = true
+
+XAdmin.Name = "X Admin"
+XAdmin.Parent = AdminCommandsGuis
+XAdmin.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+XAdmin.BorderColor3 = Color3.fromRGB(255, 0, 0)
+XAdmin.BorderSizePixel = 3
+XAdmin.Position = UDim2.new(0, 0, 0, 165)
+XAdmin.Size = UDim2.new(0.499000013, 0, 0, 30)
+XAdmin.ZIndex = 2
+XAdmin.Font = Enum.Font.SourceSans
+XAdmin.Text = "X Admin"
+XAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+XAdmin.TextSize = 14.000
+
+LagGui.Name = "Lag Gui"
+LagGui.Parent = AdminCommandsGuis
+LagGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LagGui.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LagGui.BorderSizePixel = 3
+LagGui.Position = UDim2.new(0.5, 3, 0, 165)
+LagGui.Size = UDim2.new(0.5, -3, 0, 30)
+LagGui.ZIndex = 2
+LagGui.Font = Enum.Font.SourceSans
+LagGui.Text = "Lag Gui"
+LagGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+LagGui.TextSize = 14.000
+
+GlobalMessageGui.Name = "Global Message Gui"
+GlobalMessageGui.Parent = AdminCommandsGuis
+GlobalMessageGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GlobalMessageGui.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GlobalMessageGui.BorderSizePixel = 3
+GlobalMessageGui.Position = UDim2.new(0, 0, 0, 198)
+GlobalMessageGui.Size = UDim2.new(0.499000013, 0, 0, 30)
+GlobalMessageGui.ZIndex = 3
+GlobalMessageGui.Font = Enum.Font.SourceSans
+GlobalMessageGui.Text = "Global Message Gui"
+GlobalMessageGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+GlobalMessageGui.TextSize = 14.000
+GlobalMessageGui.TextWrapped = true
+
+Empty_2.Name = "Empty"
+Empty_2.Parent = AdminCommandsGuis
+Empty_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_2.BorderSizePixel = 3
+Empty_2.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_2.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_2.ZIndex = 2
+Empty_2.Font = Enum.Font.SourceSans
+Empty_2.Text = "Empty"
+Empty_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_2.TextSize = 14.000
+
+Title.Name = "Title"
+Title.Parent = AdminCommandsGuis
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title.BorderSizePixel = 3
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.ZIndex = 2
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Admin Commands/Guis"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+ServerDestruction.Name = "Server Destruction"
+ServerDestruction.Parent = Page1
+ServerDestruction.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ServerDestruction.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ServerDestruction.BorderSizePixel = 3
+ServerDestruction.Size = UDim2.new(0.5, -3, 1, 0)
+ServerDestruction.ZIndex = 2
+
+Flood.Name = "Flood"
+Flood.Parent = ServerDestruction
+Flood.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Flood.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Flood.BorderSizePixel = 3
+Flood.Position = UDim2.new(0, 0, 0, 33)
+Flood.Size = UDim2.new(0.5, 0, 0, 30)
+Flood.ZIndex = 2
+Flood.Font = Enum.Font.SourceSans
+Flood.Text = "Flood"
+Flood.TextColor3 = Color3.fromRGB(255, 255, 255)
+Flood.TextSize = 14.000
+
+ClearTerrain.Name = "Clear Terrain"
+ClearTerrain.Parent = ServerDestruction
+ClearTerrain.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ClearTerrain.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ClearTerrain.BorderSizePixel = 3
+ClearTerrain.Position = UDim2.new(0.5, 3, 0, 33)
+ClearTerrain.Size = UDim2.new(0.5, -3, 0, 30)
+ClearTerrain.ZIndex = 2
+ClearTerrain.Font = Enum.Font.SourceSans
+ClearTerrain.Text = "Clear Terrain"
+ClearTerrain.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearTerrain.TextSize = 14.000
+ClearTerrain.TextWrapped = true
+
+ApocTroll.Name = "Apoc Troll"
+ApocTroll.Parent = ServerDestruction
+ApocTroll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ApocTroll.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ApocTroll.BorderSizePixel = 3
+ApocTroll.Position = UDim2.new(0, 0, 0, 66)
+ApocTroll.Size = UDim2.new(0.5, 0, 0, 30)
+ApocTroll.ZIndex = 2
+ApocTroll.Font = Enum.Font.SourceSans
+ApocTroll.Text = "Apoc Troll"
+ApocTroll.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApocTroll.TextSize = 14.000
+ApocTroll.TextWrapped = true
+
+SetSkybox.Name = "Set Skybox"
+SetSkybox.Parent = ServerDestruction
+SetSkybox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetSkybox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SetSkybox.BorderSizePixel = 3
+SetSkybox.Position = UDim2.new(0.5, 3, 0, 66)
+SetSkybox.Size = UDim2.new(0.5, -3, 0, 30)
+SetSkybox.ZIndex = 2
+SetSkybox.Font = Enum.Font.SourceSans
+SetSkybox.Text = "Set Skybox"
+SetSkybox.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetSkybox.TextSize = 14.000
+SetSkybox.TextWrapped = true
+
+UnanchorAll.Name = "Unanchor All"
+UnanchorAll.Parent = ServerDestruction
+UnanchorAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+UnanchorAll.BorderColor3 = Color3.fromRGB(255, 0, 0)
+UnanchorAll.BorderSizePixel = 3
+UnanchorAll.Position = UDim2.new(0, 0, 0, 99)
+UnanchorAll.Size = UDim2.new(0.499000013, 0, 0, 30)
+UnanchorAll.ZIndex = 2
+UnanchorAll.Font = Enum.Font.SourceSans
+UnanchorAll.Text = "Unanchor All"
+UnanchorAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+UnanchorAll.TextSize = 14.000
+UnanchorAll.TextWrapped = true
+
+DecalSpam.Name = "Decal Spam"
+DecalSpam.Parent = ServerDestruction
+DecalSpam.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DecalSpam.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DecalSpam.BorderSizePixel = 3
+DecalSpam.Position = UDim2.new(0.5, 3, 0, 99)
+DecalSpam.Size = UDim2.new(0.5, -3, 0, 30)
+DecalSpam.ZIndex = 2
+DecalSpam.Font = Enum.Font.SourceSans
+DecalSpam.Text = "Decal Spam"
+DecalSpam.TextColor3 = Color3.fromRGB(255, 255, 255)
+DecalSpam.TextSize = 14.000
+
+ForceTeleport.Name = "Force Teleport"
+ForceTeleport.Parent = ServerDestruction
+ForceTeleport.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ForceTeleport.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ForceTeleport.BorderSizePixel = 3
+ForceTeleport.Position = UDim2.new(0, 0, 0, 132)
+ForceTeleport.Size = UDim2.new(0.499000013, 0, 0, 30)
+ForceTeleport.ZIndex = 2
+ForceTeleport.Font = Enum.Font.SourceSans
+ForceTeleport.Text = "Force Teleport"
+ForceTeleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+ForceTeleport.TextSize = 14.000
+ForceTeleport.TextWrapped = true
+
+ClearWorkspace.Name = "Clear Workspace"
+ClearWorkspace.Parent = ServerDestruction
+ClearWorkspace.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ClearWorkspace.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ClearWorkspace.BorderSizePixel = 3
+ClearWorkspace.Position = UDim2.new(0.5, 3, 0, 132)
+ClearWorkspace.Size = UDim2.new(0.5, -3, 0, 30)
+ClearWorkspace.ZIndex = 2
+ClearWorkspace.Font = Enum.Font.SourceSans
+ClearWorkspace.Text = "Clear Workspace"
+ClearWorkspace.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearWorkspace.TextSize = 14.000
+ClearWorkspace.TextWrapped = true
+
+KillAll.Name = "Kill All"
+KillAll.Parent = ServerDestruction
+KillAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.BorderColor3 = Color3.fromRGB(255, 0, 0)
+KillAll.BorderSizePixel = 3
+KillAll.Position = UDim2.new(0, 0, 0, 165)
+KillAll.Size = UDim2.new(0.5, 0, 0, 30)
+KillAll.ZIndex = 2
+KillAll.Font = Enum.Font.SourceSans
+KillAll.Text = "Kill All"
+KillAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillAll.TextSize = 14.000
+
+KickAll.Name = "Kick All"
+KickAll.Parent = ServerDestruction
+KickAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KickAll.BorderColor3 = Color3.fromRGB(255, 0, 0)
+KickAll.BorderSizePixel = 3
+KickAll.Position = UDim2.new(0.5, 3, 0, 165)
+KickAll.Size = UDim2.new(0.5, -3, 0, 30)
+KickAll.ZIndex = 2
+KickAll.Font = Enum.Font.SourceSans
+KickAll.Text = "Kick All"
+KickAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+KickAll.TextSize = 14.000
+
+CreateBaseplate.Name = "Create Baseplate"
+CreateBaseplate.Parent = ServerDestruction
+CreateBaseplate.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CreateBaseplate.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CreateBaseplate.BorderSizePixel = 3
+CreateBaseplate.Position = UDim2.new(0, 0, 0, 198)
+CreateBaseplate.Size = UDim2.new(0.5, 0, 0, 30)
+CreateBaseplate.ZIndex = 2
+CreateBaseplate.Font = Enum.Font.SourceSans
+CreateBaseplate.Text = "Create Baseplate"
+CreateBaseplate.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreateBaseplate.TextSize = 14.000
+CreateBaseplate.TextWrapped = true
+
+Intimidation.Name = "Intimidation"
+Intimidation.Parent = ServerDestruction
+Intimidation.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Intimidation.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Intimidation.BorderSizePixel = 3
+Intimidation.Position = UDim2.new(0.5, 3, 0, 198)
+Intimidation.Size = UDim2.new(0.479999989, 0, 0, 30)
+Intimidation.ZIndex = 2
+Intimidation.Font = Enum.Font.SourceSans
+Intimidation.Text = "Intimidation"
+Intimidation.TextColor3 = Color3.fromRGB(255, 255, 255)
+Intimidation.TextSize = 14.000
+Intimidation.TextWrapped = true
+
+Title_2.Name = "Title"
+Title_2.Parent = ServerDestruction
+Title_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_2.BorderSizePixel = 3
+Title_2.Size = UDim2.new(1, 0, 0, 30)
+Title_2.ZIndex = 2
+Title_2.Font = Enum.Font.SourceSansBold
+Title_2.Text = "Server Destruction"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 14.000
+
+Page2.Name = "Page2"
+Page2.Parent = Frame
+Page2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page2.BorderSizePixel = 3
+Page2.Position = UDim2.new(0, 0, 0, 83)
+Page2.Size = UDim2.new(1, 0, 1, -106)
+Page2.Visible = false
+Page2.ZIndex = 2
+
+GearTools.Name = "Gear/Tools"
+GearTools.Parent = Page2
+GearTools.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GearTools.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GearTools.BorderSizePixel = 3
+GearTools.Position = UDim2.new(0.5, 3, 0, 0)
+GearTools.Size = UDim2.new(0.5, -3, 1, 0)
+GearTools.ZIndex = 2
+
+CustomGear.Name = "Custom Gear"
+CustomGear.Parent = GearTools
+CustomGear.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CustomGear.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CustomGear.BorderSizePixel = 3
+CustomGear.Position = UDim2.new(0, 0, 0, 33)
+CustomGear.Size = UDim2.new(0.5, 0, 0, 30)
+CustomGear.ZIndex = 2
+CustomGear.Font = Enum.Font.SourceSans
+CustomGear.Text = "Custom Gear"
+CustomGear.TextColor3 = Color3.fromRGB(255, 255, 255)
+CustomGear.TextSize = 14.000
+
+StamperTools.Name = "Stamper Tools"
+StamperTools.Parent = GearTools
+StamperTools.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StamperTools.BorderColor3 = Color3.fromRGB(255, 0, 0)
+StamperTools.BorderSizePixel = 3
+StamperTools.Position = UDim2.new(0.5, 3, 0, 33)
+StamperTools.Size = UDim2.new(0.5, -3, 0, 30)
+StamperTools.ZIndex = 2
+StamperTools.Font = Enum.Font.SourceSans
+StamperTools.Text = "Stamper Tools"
+StamperTools.TextColor3 = Color3.fromRGB(255, 255, 255)
+StamperTools.TextSize = 14.000
+StamperTools.TextWrapped = true
+
+ToolStealer.Name = "Tool Stealer"
+ToolStealer.Parent = GearTools
+ToolStealer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToolStealer.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ToolStealer.BorderSizePixel = 3
+ToolStealer.Position = UDim2.new(0, 0, 0, 66)
+ToolStealer.Size = UDim2.new(0.5, 0, 0, 30)
+ToolStealer.ZIndex = 2
+ToolStealer.Font = Enum.Font.SourceSans
+ToolStealer.Text = "Tool Stealer"
+ToolStealer.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToolStealer.TextSize = 14.000
+ToolStealer.TextWrapped = true
+
+Empty_3.Name = "Empty"
+Empty_3.Parent = GearTools
+Empty_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_3.BorderSizePixel = 3
+Empty_3.Position = UDim2.new(0.5, 3, 0, 66)
+Empty_3.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_3.ZIndex = 2
+Empty_3.Font = Enum.Font.SourceSans
+Empty_3.Text = "Empty"
+Empty_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_3.TextSize = 14.000
+
+Minigun.Name = "Minigun"
+Minigun.Parent = GearTools
+Minigun.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Minigun.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Minigun.BorderSizePixel = 3
+Minigun.Position = UDim2.new(0, 0, 0, 99)
+Minigun.Size = UDim2.new(0.5, 0, 0, 30)
+Minigun.ZIndex = 2
+Minigun.Font = Enum.Font.SourceSans
+Minigun.Text = "Dev Uzi"
+Minigun.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minigun.TextSize = 14.000
+
+GodLaser.Name = "God Laser"
+GodLaser.Parent = GearTools
+GodLaser.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GodLaser.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GodLaser.BorderSizePixel = 3
+GodLaser.Position = UDim2.new(0.5, 3, 0, 99)
+GodLaser.Size = UDim2.new(0.5, -3, 0, 30)
+GodLaser.ZIndex = 2
+GodLaser.Font = Enum.Font.SourceSans
+GodLaser.Text = "God Laser"
+GodLaser.TextColor3 = Color3.fromRGB(255, 255, 255)
+GodLaser.TextSize = 14.000
+GodLaser.TextWrapped = true
+
+DrawTool.Name = "Draw Tool"
+DrawTool.Parent = GearTools
+DrawTool.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DrawTool.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DrawTool.BorderSizePixel = 3
+DrawTool.Position = UDim2.new(0, 0, 0, 132)
+DrawTool.Size = UDim2.new(0.5, 0, 0, 30)
+DrawTool.ZIndex = 2
+DrawTool.Font = Enum.Font.SourceSans
+DrawTool.Text = "Draw Tool"
+DrawTool.TextColor3 = Color3.fromRGB(255, 255, 255)
+DrawTool.TextSize = 14.000
+
+Empty_4.Name = "Empty"
+Empty_4.Parent = GearTools
+Empty_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_4.BorderSizePixel = 3
+Empty_4.Position = UDim2.new(0.5, 3, 0, 132)
+Empty_4.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_4.ZIndex = 2
+Empty_4.Font = Enum.Font.SourceSans
+Empty_4.Text = "Empty"
+Empty_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_4.TextSize = 14.000
+Empty_4.TextWrapped = true
+
+Empty_5.Name = "Empty"
+Empty_5.Parent = GearTools
+Empty_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_5.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_5.BorderSizePixel = 3
+Empty_5.Position = UDim2.new(0, 0, 0, 165)
+Empty_5.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_5.ZIndex = 2
+Empty_5.Font = Enum.Font.SourceSans
+Empty_5.Text = "Empty"
+Empty_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_5.TextSize = 14.000
+
+Empty_6.Name = "Empty"
+Empty_6.Parent = GearTools
+Empty_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_6.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_6.BorderSizePixel = 3
+Empty_6.Position = UDim2.new(0.5, 3, 0, 165)
+Empty_6.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_6.ZIndex = 2
+Empty_6.Font = Enum.Font.SourceSans
+Empty_6.Text = "Empty"
+Empty_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_6.TextSize = 14.000
+
+Empty_7.Name = "Empty"
+Empty_7.Parent = GearTools
+Empty_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_7.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_7.BorderSizePixel = 3
+Empty_7.Position = UDim2.new(0, 0, 0, 198)
+Empty_7.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_7.ZIndex = 3
+Empty_7.Font = Enum.Font.SourceSans
+Empty_7.Text = "Empty"
+Empty_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_7.TextSize = 14.000
+Empty_7.TextWrapped = true
+
+Empty_8.Name = "Empty"
+Empty_8.Parent = GearTools
+Empty_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_8.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_8.BorderSizePixel = 3
+Empty_8.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_8.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_8.ZIndex = 2
+Empty_8.Font = Enum.Font.SourceSans
+Empty_8.Text = "Empty"
+Empty_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_8.TextSize = 14.000
+
+Title_3.Name = "Title"
+Title_3.Parent = GearTools
+Title_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_3.BorderSizePixel = 3
+Title_3.Size = UDim2.new(1, 0, 0, 30)
+Title_3.ZIndex = 2
+Title_3.Font = Enum.Font.SourceSansBold
+Title_3.Text = "Gear/Tools"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 14.000
+
+WeaponScripts.Name = "Weapon Scripts"
+WeaponScripts.Parent = Page2
+WeaponScripts.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WeaponScripts.BorderColor3 = Color3.fromRGB(255, 0, 0)
+WeaponScripts.BorderSizePixel = 3
+WeaponScripts.Size = UDim2.new(0.5, -3, 1, 0)
+WeaponScripts.ZIndex = 2
+
+Drage.Name = "Drage"
+Drage.Parent = WeaponScripts
+Drage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Drage.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Drage.BorderSizePixel = 3
+Drage.Position = UDim2.new(0, 0, 0, 33)
+Drage.Size = UDim2.new(0.5, 0, 0, 30)
+Drage.ZIndex = 2
+Drage.Font = Enum.Font.SourceSans
+Drage.Text = "Drage"
+Drage.TextColor3 = Color3.fromRGB(255, 255, 255)
+Drage.TextSize = 14.000
+
+DualBlades.Name = "Dual Blades"
+DualBlades.Parent = WeaponScripts
+DualBlades.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DualBlades.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DualBlades.BorderSizePixel = 3
+DualBlades.Position = UDim2.new(0.5, 3, 0, 33)
+DualBlades.Size = UDim2.new(0.5, -3, 0, 30)
+DualBlades.ZIndex = 2
+DualBlades.Font = Enum.Font.SourceSans
+DualBlades.Text = "Dual Blades"
+DualBlades.TextColor3 = Color3.fromRGB(255, 255, 255)
+DualBlades.TextSize = 14.000
+DualBlades.TextWrapped = true
+
+Eyelaser.Name = "Eyelaser"
+Eyelaser.Parent = WeaponScripts
+Eyelaser.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Eyelaser.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Eyelaser.BorderSizePixel = 3
+Eyelaser.Position = UDim2.new(0, 0, 0, 66)
+Eyelaser.Size = UDim2.new(0.5, 0, 0, 30)
+Eyelaser.ZIndex = 2
+Eyelaser.Font = Enum.Font.SourceSans
+Eyelaser.Text = "Eyelaser"
+Eyelaser.TextColor3 = Color3.fromRGB(255, 255, 255)
+Eyelaser.TextSize = 14.000
+Eyelaser.TextWrapped = true
+
+Knife.Name = "Knife"
+Knife.Parent = WeaponScripts
+Knife.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Knife.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Knife.BorderSizePixel = 3
+Knife.Position = UDim2.new(0.5, 3, 0, 66)
+Knife.Size = UDim2.new(0.5, -3, 0, 30)
+Knife.ZIndex = 2
+Knife.Font = Enum.Font.SourceSans
+Knife.Text = "Knife"
+Knife.TextColor3 = Color3.fromRGB(255, 255, 255)
+Knife.TextSize = 14.000
+Knife.TextWrapped = true
+
+Lance.Name = "Lance"
+Lance.Parent = WeaponScripts
+Lance.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lance.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Lance.BorderSizePixel = 3
+Lance.Position = UDim2.new(0, 0, 0, 99)
+Lance.Size = UDim2.new(0.499000013, 0, 0, 30)
+Lance.ZIndex = 2
+Lance.Font = Enum.Font.SourceSans
+Lance.Text = "Lance"
+Lance.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lance.TextSize = 14.000
+Lance.TextWrapped = true
+
+Lightsaber.Name = "Lightsaber"
+Lightsaber.Parent = WeaponScripts
+Lightsaber.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lightsaber.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Lightsaber.BorderSizePixel = 3
+Lightsaber.Position = UDim2.new(0.5, 3, 0, 99)
+Lightsaber.Size = UDim2.new(0.5, -3, 0, 30)
+Lightsaber.ZIndex = 2
+Lightsaber.Font = Enum.Font.SourceSans
+Lightsaber.Text = "Lightsaber"
+Lightsaber.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lightsaber.TextSize = 14.000
+
+MasterHand.Name = "Master Hand"
+MasterHand.Parent = WeaponScripts
+MasterHand.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MasterHand.BorderColor3 = Color3.fromRGB(255, 0, 0)
+MasterHand.BorderSizePixel = 3
+MasterHand.Position = UDim2.new(0, 0, 0, 132)
+MasterHand.Size = UDim2.new(0.499000013, 0, 0, 30)
+MasterHand.ZIndex = 2
+MasterHand.Font = Enum.Font.SourceSans
+MasterHand.Text = "Master Hand"
+MasterHand.TextColor3 = Color3.fromRGB(255, 255, 255)
+MasterHand.TextSize = 14.000
+MasterHand.TextWrapped = true
+
+Plane.Name = "Plane"
+Plane.Parent = WeaponScripts
+Plane.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Plane.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Plane.BorderSizePixel = 3
+Plane.Position = UDim2.new(0.5, 3, 0, 132)
+Plane.Size = UDim2.new(0.5, -3, 0, 30)
+Plane.ZIndex = 2
+Plane.Font = Enum.Font.SourceSans
+Plane.Text = "Plane"
+Plane.TextColor3 = Color3.fromRGB(255, 255, 255)
+Plane.TextSize = 14.000
+Plane.TextWrapped = true
+
+Snowball.Name = "Snowball"
+Snowball.Parent = WeaponScripts
+Snowball.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Snowball.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Snowball.BorderSizePixel = 3
+Snowball.Position = UDim2.new(0, 0, 0, 165)
+Snowball.Size = UDim2.new(0.5, 0, 0, 30)
+Snowball.ZIndex = 2
+Snowball.Font = Enum.Font.SourceSans
+Snowball.Text = "Snowball"
+Snowball.TextColor3 = Color3.fromRGB(255, 255, 255)
+Snowball.TextSize = 14.000
+
+Staff.Name = "Staff"
+Staff.Parent = WeaponScripts
+Staff.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Staff.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Staff.BorderSizePixel = 3
+Staff.Position = UDim2.new(0.5, 3, 0, 165)
+Staff.Size = UDim2.new(0.5, -3, 0, 30)
+Staff.ZIndex = 2
+Staff.Font = Enum.Font.SourceSans
+Staff.Text = "Staff"
+Staff.TextColor3 = Color3.fromRGB(255, 255, 255)
+Staff.TextSize = 14.000
+
+Empty_9.Name = "Empty"
+Empty_9.Parent = WeaponScripts
+Empty_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_9.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_9.BorderSizePixel = 3
+Empty_9.Position = UDim2.new(0, 0, 0, 198)
+Empty_9.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_9.ZIndex = 2
+Empty_9.Font = Enum.Font.SourceSans
+Empty_9.Text = "Empty"
+Empty_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_9.TextSize = 14.000
+Empty_9.TextWrapped = true
+
+TechnoGauntlet.Name = "Techno Gauntlet"
+TechnoGauntlet.Parent = WeaponScripts
+TechnoGauntlet.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TechnoGauntlet.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TechnoGauntlet.BorderSizePixel = 3
+TechnoGauntlet.Position = UDim2.new(0.5, 3, 0, 198)
+TechnoGauntlet.Size = UDim2.new(0.479999989, 0, 0, 30)
+TechnoGauntlet.ZIndex = 2
+TechnoGauntlet.Font = Enum.Font.SourceSans
+TechnoGauntlet.Text = "Techno Gauntlet"
+TechnoGauntlet.TextColor3 = Color3.fromRGB(255, 255, 255)
+TechnoGauntlet.TextSize = 14.000
+TechnoGauntlet.TextWrapped = true
+
+Wand.Name = "Wand"
+Wand.Parent = WeaponScripts
+Wand.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Wand.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Wand.BorderSizePixel = 3
+Wand.Position = UDim2.new(0, 0, 0, 231)
+Wand.Size = UDim2.new(0.5, 0, 0, 30)
+Wand.ZIndex = 2
+Wand.Font = Enum.Font.SourceSans
+Wand.Text = "Wand"
+Wand.TextColor3 = Color3.fromRGB(255, 255, 255)
+Wand.TextSize = 14.000
+Wand.TextWrapped = true
+
+xBow.Name = "xBow"
+xBow.Parent = WeaponScripts
+xBow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+xBow.BorderColor3 = Color3.fromRGB(255, 0, 0)
+xBow.BorderSizePixel = 3
+xBow.Position = UDim2.new(0.5, 3, 0, 231)
+xBow.Size = UDim2.new(0.5, -3, 0, 30)
+xBow.ZIndex = 2
+xBow.Font = Enum.Font.SourceSans
+xBow.Text = "xBow"
+xBow.TextColor3 = Color3.fromRGB(255, 255, 255)
+xBow.TextSize = 14.000
+xBow.TextWrapped = true
+
+Title_4.Name = "Title"
+Title_4.Parent = WeaponScripts
+Title_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_4.BorderSizePixel = 3
+Title_4.Size = UDim2.new(1, 0, 0, 30)
+Title_4.ZIndex = 2
+Title_4.Font = Enum.Font.SourceSansBold
+Title_4.Text = "Weapon Scripts"
+Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.TextSize = 14.000
+
+Page3.Name = "Page3"
+Page3.Parent = Frame
+Page3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page3.BorderSizePixel = 3
+Page3.Position = UDim2.new(0, 0, 0, 83)
+Page3.Size = UDim2.new(1, 0, 1, -106)
+Page3.Visible = false
+Page3.ZIndex = 2
+
+LocalPlayer.Name = "LocalPlayer"
+LocalPlayer.Parent = Page3
+LocalPlayer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayer.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LocalPlayer.BorderSizePixel = 3
+LocalPlayer.Position = UDim2.new(0.5, 3, 0, 0)
+LocalPlayer.Size = UDim2.new(0.5, -3, 1, 0)
+LocalPlayer.ZIndex = 2
+
+AntiRobloxian.Name = "Anti-Robloxian"
+AntiRobloxian.Parent = LocalPlayer
+AntiRobloxian.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AntiRobloxian.BorderColor3 = Color3.fromRGB(255, 0, 0)
+AntiRobloxian.BorderSizePixel = 3
+AntiRobloxian.Position = UDim2.new(0, 0, 0, 33)
+AntiRobloxian.Size = UDim2.new(0.5, 0, 0, 30)
+AntiRobloxian.ZIndex = 2
+AntiRobloxian.Font = Enum.Font.SourceSans
+AntiRobloxian.Text = "Anti-Robloxian"
+AntiRobloxian.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiRobloxian.TextSize = 14.000
+AntiRobloxian.TextWrapped = true
+
+BillboardGui.Name = "Billboard Gui"
+BillboardGui.Parent = LocalPlayer
+BillboardGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BillboardGui.BorderColor3 = Color3.fromRGB(255, 0, 0)
+BillboardGui.BorderSizePixel = 3
+BillboardGui.Position = UDim2.new(0.5, 3, 0, 33)
+BillboardGui.Size = UDim2.new(0.5, -3, 0, 30)
+BillboardGui.ZIndex = 2
+BillboardGui.Font = Enum.Font.SourceSans
+BillboardGui.Text = "Billboard Gui"
+BillboardGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+BillboardGui.TextSize = 14.000
+BillboardGui.TextWrapped = true
+
+ChangeName.Name = "Change Name"
+ChangeName.Parent = LocalPlayer
+ChangeName.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ChangeName.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ChangeName.BorderSizePixel = 3
+ChangeName.Position = UDim2.new(0, 0, 0, 66)
+ChangeName.Size = UDim2.new(0.5, 0, 0, 30)
+ChangeName.ZIndex = 2
+ChangeName.Font = Enum.Font.SourceSans
+ChangeName.Text = "Change Name"
+ChangeName.TextColor3 = Color3.fromRGB(255, 255, 255)
+ChangeName.TextSize = 14.000
+ChangeName.TextWrapped = true
+
+ChickenArms.Name = "Chicken Arms"
+ChickenArms.Parent = LocalPlayer
+ChickenArms.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ChickenArms.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ChickenArms.BorderSizePixel = 3
+ChickenArms.Position = UDim2.new(0.5, 3, 0, 66)
+ChickenArms.Size = UDim2.new(0.5, -3, 0, 30)
+ChickenArms.ZIndex = 2
+ChickenArms.Font = Enum.Font.SourceSans
+ChickenArms.Text = "Chicken Arms"
+ChickenArms.TextColor3 = Color3.fromRGB(255, 255, 255)
+ChickenArms.TextSize = 14.000
+ChickenArms.TextWrapped = true
+
+DiscoCharacter.Name = "Disco Character"
+DiscoCharacter.Parent = LocalPlayer
+DiscoCharacter.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DiscoCharacter.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DiscoCharacter.BorderSizePixel = 3
+DiscoCharacter.Position = UDim2.new(0, 0, 0, 99)
+DiscoCharacter.Size = UDim2.new(0.499000013, 0, 0, 30)
+DiscoCharacter.ZIndex = 2
+DiscoCharacter.Font = Enum.Font.SourceSans
+DiscoCharacter.Text = "Disco Character"
+DiscoCharacter.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscoCharacter.TextSize = 14.000
+DiscoCharacter.TextWrapped = true
+
+DominusGhost.Name = "Dominus Ghost"
+DominusGhost.Parent = LocalPlayer
+DominusGhost.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DominusGhost.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DominusGhost.BorderSizePixel = 3
+DominusGhost.Position = UDim2.new(0.5, 3, 0, 99)
+DominusGhost.Size = UDim2.new(0.5, -3, 0, 30)
+DominusGhost.ZIndex = 2
+DominusGhost.Font = Enum.Font.SourceSans
+DominusGhost.Text = "Dominus Ghost"
+DominusGhost.TextColor3 = Color3.fromRGB(255, 255, 255)
+DominusGhost.TextSize = 14.000
+DominusGhost.TextWrapped = true
+
+FloatingPad.Name = "Floating Pad"
+FloatingPad.Parent = LocalPlayer
+FloatingPad.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FloatingPad.BorderColor3 = Color3.fromRGB(255, 0, 0)
+FloatingPad.BorderSizePixel = 3
+FloatingPad.Position = UDim2.new(0, 0, 0, 132)
+FloatingPad.Size = UDim2.new(0.499000013, 0, 0, 30)
+FloatingPad.ZIndex = 2
+FloatingPad.Font = Enum.Font.SourceSans
+FloatingPad.Text = "Floating Pad"
+FloatingPad.TextColor3 = Color3.fromRGB(255, 255, 255)
+FloatingPad.TextSize = 14.000
+FloatingPad.TextWrapped = true
+
+HeadShake.Name = "Head Shake"
+HeadShake.Parent = LocalPlayer
+HeadShake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HeadShake.BorderColor3 = Color3.fromRGB(255, 0, 0)
+HeadShake.BorderSizePixel = 3
+HeadShake.Position = UDim2.new(0.5, 3, 0, 132)
+HeadShake.Size = UDim2.new(0.5, -3, 0, 30)
+HeadShake.ZIndex = 2
+HeadShake.Font = Enum.Font.SourceSans
+HeadShake.Text = "Head Shake"
+HeadShake.TextColor3 = Color3.fromRGB(255, 255, 255)
+HeadShake.TextSize = 14.000
+HeadShake.TextWrapped = true
+
+Heal.Name = "Heal"
+Heal.Parent = LocalPlayer
+Heal.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Heal.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Heal.BorderSizePixel = 3
+Heal.Position = UDim2.new(0, 0, 0, 165)
+Heal.Size = UDim2.new(0.5, 0, 0, 30)
+Heal.ZIndex = 2
+Heal.Font = Enum.Font.SourceSans
+Heal.Text = "Heal"
+Heal.TextColor3 = Color3.fromRGB(255, 255, 255)
+Heal.TextSize = 14.000
+Heal.TextWrapped = true
+
+MeshDisco.Name = "Mesh Disco"
+MeshDisco.Parent = LocalPlayer
+MeshDisco.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MeshDisco.BorderColor3 = Color3.fromRGB(255, 0, 0)
+MeshDisco.BorderSizePixel = 3
+MeshDisco.Position = UDim2.new(0.5, 3, 0, 165)
+MeshDisco.Size = UDim2.new(0.5, -3, 0, 30)
+MeshDisco.ZIndex = 2
+MeshDisco.Font = Enum.Font.SourceSans
+MeshDisco.Text = "Mesh Disco"
+MeshDisco.TextColor3 = Color3.fromRGB(255, 255, 255)
+MeshDisco.TextSize = 14.000
+MeshDisco.TextWrapped = true
+
+SetWalkspeed.Name = "Set Walkspeed"
+SetWalkspeed.Parent = LocalPlayer
+SetWalkspeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetWalkspeed.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SetWalkspeed.BorderSizePixel = 3
+SetWalkspeed.Position = UDim2.new(0, 0, 0, 198)
+SetWalkspeed.Size = UDim2.new(0.5, 0, 0, 30)
+SetWalkspeed.ZIndex = 2
+SetWalkspeed.Font = Enum.Font.SourceSans
+SetWalkspeed.Text = "Set Walkspeed"
+SetWalkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetWalkspeed.TextSize = 14.000
+SetWalkspeed.TextWrapped = true
+
+Empty_10.Name = "Empty"
+Empty_10.Parent = LocalPlayer
+Empty_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_10.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_10.BorderSizePixel = 3
+Empty_10.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_10.Size = UDim2.new(0.479999989, 0, 0, 30)
+Empty_10.ZIndex = 2
+Empty_10.Font = Enum.Font.SourceSans
+Empty_10.Text = "Empty"
+Empty_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_10.TextSize = 14.000
+Empty_10.TextWrapped = true
+
+Empty_11.Name = "Empty"
+Empty_11.Parent = LocalPlayer
+Empty_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_11.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_11.BorderSizePixel = 3
+Empty_11.Position = UDim2.new(0, 0, 0, 231)
+Empty_11.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_11.ZIndex = 2
+Empty_11.Font = Enum.Font.SourceSans
+Empty_11.Text = "Empty"
+Empty_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_11.TextSize = 14.000
+Empty_11.TextWrapped = true
+
+Empty_12.Name = "Empty"
+Empty_12.Parent = LocalPlayer
+Empty_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_12.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_12.BorderSizePixel = 3
+Empty_12.Position = UDim2.new(0.5, 3, 0, 231)
+Empty_12.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_12.ZIndex = 2
+Empty_12.Font = Enum.Font.SourceSans
+Empty_12.Text = "Empty"
+Empty_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_12.TextSize = 14.000
+Empty_12.TextWrapped = true
+
+Title_5.Name = "Title"
+Title_5.Parent = LocalPlayer
+Title_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_5.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_5.BorderSizePixel = 3
+Title_5.Size = UDim2.new(1, 0, 0, 30)
+Title_5.ZIndex = 2
+Title_5.Font = Enum.Font.SourceSansBold
+Title_5.Text = "LocalPlayer"
+Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.TextSize = 14.000
+
+Misc.Name = "Misc"
+Misc.Parent = Page3
+Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Misc.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Misc.BorderSizePixel = 3
+Misc.Size = UDim2.new(0.5, -3, 1, 0)
+Misc.ZIndex = 2
+
+BecomeOwnerinPersonalServer.Name = "Become Owner in Personal Server"
+BecomeOwnerinPersonalServer.Parent = Misc
+BecomeOwnerinPersonalServer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BecomeOwnerinPersonalServer.BorderColor3 = Color3.fromRGB(255, 0, 0)
+BecomeOwnerinPersonalServer.BorderSizePixel = 3
+BecomeOwnerinPersonalServer.Position = UDim2.new(0, 0, 0, 33)
+BecomeOwnerinPersonalServer.Size = UDim2.new(0.5, 0, 0, 30)
+BecomeOwnerinPersonalServer.ZIndex = 2
+BecomeOwnerinPersonalServer.Font = Enum.Font.SourceSans
+BecomeOwnerinPersonalServer.Text = "Become Owner [PS]"
+BecomeOwnerinPersonalServer.TextColor3 = Color3.fromRGB(255, 255, 255)
+BecomeOwnerinPersonalServer.TextSize = 14.000
+BecomeOwnerinPersonalServer.TextWrapped = true
+
+DiscoFog.Name = "Disco Fog"
+DiscoFog.Parent = Misc
+DiscoFog.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DiscoFog.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DiscoFog.BorderSizePixel = 3
+DiscoFog.Position = UDim2.new(0.5, 3, 0, 33)
+DiscoFog.Size = UDim2.new(0.5, -3, 0, 30)
+DiscoFog.ZIndex = 2
+DiscoFog.Font = Enum.Font.SourceSans
+DiscoFog.Text = "Disco Fog"
+DiscoFog.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscoFog.TextSize = 14.000
+DiscoFog.TextWrapped = true
+
+FencingRestore.Name = "Fencing Restore"
+FencingRestore.Parent = Misc
+FencingRestore.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FencingRestore.BorderColor3 = Color3.fromRGB(255, 0, 0)
+FencingRestore.BorderSizePixel = 3
+FencingRestore.Position = UDim2.new(0, 0, 0, 66)
+FencingRestore.Size = UDim2.new(0.5, 0, 0, 30)
+FencingRestore.ZIndex = 2
+FencingRestore.Font = Enum.Font.SourceSans
+FencingRestore.Text = "Fencing Restore"
+FencingRestore.TextColor3 = Color3.fromRGB(255, 255, 255)
+FencingRestore.TextSize = 14.000
+FencingRestore.TextWrapped = true
+
+LeaderstatAdd.Name = "Leaderstat Add"
+LeaderstatAdd.Parent = Misc
+LeaderstatAdd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LeaderstatAdd.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LeaderstatAdd.BorderSizePixel = 3
+LeaderstatAdd.Position = UDim2.new(0.5, 3, 0, 66)
+LeaderstatAdd.Size = UDim2.new(0.5, -3, 0, 30)
+LeaderstatAdd.ZIndex = 2
+LeaderstatAdd.Font = Enum.Font.SourceSans
+LeaderstatAdd.Text = "Leaderstat Add"
+LeaderstatAdd.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeaderstatAdd.TextSize = 14.000
+LeaderstatAdd.TextWrapped = true
+
+LeaderstatChange.Name = "Leaderstat Change"
+LeaderstatChange.Parent = Misc
+LeaderstatChange.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LeaderstatChange.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LeaderstatChange.BorderSizePixel = 3
+LeaderstatChange.Position = UDim2.new(0, 0, 0, 99)
+LeaderstatChange.Size = UDim2.new(0.5, 0, 0, 30)
+LeaderstatChange.ZIndex = 2
+LeaderstatChange.Font = Enum.Font.SourceSans
+LeaderstatChange.Text = "Leaderstat Change"
+LeaderstatChange.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeaderstatChange.TextSize = 14.000
+LeaderstatChange.TextWrapped = true
+
+PlayMusic.Name = "Play Music"
+PlayMusic.Parent = Misc
+PlayMusic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlayMusic.BorderColor3 = Color3.fromRGB(255, 0, 0)
+PlayMusic.BorderSizePixel = 3
+PlayMusic.Position = UDim2.new(0.5, 3, 0, 99)
+PlayMusic.Size = UDim2.new(0.5, -3, 0, 30)
+PlayMusic.ZIndex = 2
+PlayMusic.Font = Enum.Font.SourceSans
+PlayMusic.Text = "Play Music"
+PlayMusic.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayMusic.TextSize = 14.000
+PlayMusic.TextWrapped = true
+
+RestoreSkybox.Name = "Restore Skybox"
+RestoreSkybox.Parent = Misc
+RestoreSkybox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RestoreSkybox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+RestoreSkybox.BorderSizePixel = 3
+RestoreSkybox.Position = UDim2.new(0, 0, 0, 132)
+RestoreSkybox.Size = UDim2.new(0.5, 0, 0, 30)
+RestoreSkybox.ZIndex = 2
+RestoreSkybox.Font = Enum.Font.SourceSans
+RestoreSkybox.Text = "Restore Skybox"
+RestoreSkybox.TextColor3 = Color3.fromRGB(255, 255, 255)
+RestoreSkybox.TextSize = 14.000
+RestoreSkybox.TextWrapped = true
+
+StealPlayerPoints.Name = "Steal Player Points"
+StealPlayerPoints.Parent = Misc
+StealPlayerPoints.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StealPlayerPoints.BorderColor3 = Color3.fromRGB(255, 0, 0)
+StealPlayerPoints.BorderSizePixel = 3
+StealPlayerPoints.Position = UDim2.new(0.5, 3, 0, 132)
+StealPlayerPoints.Size = UDim2.new(0.5, -3, 0, 30)
+StealPlayerPoints.ZIndex = 2
+StealPlayerPoints.Font = Enum.Font.SourceSans
+StealPlayerPoints.Text = "Steal Player Points"
+StealPlayerPoints.TextColor3 = Color3.fromRGB(255, 255, 255)
+StealPlayerPoints.TextSize = 14.000
+StealPlayerPoints.TextWrapped = true
+
+Empty_13.Name = "Empty"
+Empty_13.Parent = Misc
+Empty_13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_13.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_13.BorderSizePixel = 3
+Empty_13.Position = UDim2.new(0, 0, 0, 165)
+Empty_13.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_13.ZIndex = 2
+Empty_13.Font = Enum.Font.SourceSans
+Empty_13.Text = "Empty"
+Empty_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_13.TextSize = 14.000
+Empty_13.TextWrapped = true
+
+Empty_14.Name = "Empty"
+Empty_14.Parent = Misc
+Empty_14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_14.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_14.BorderSizePixel = 3
+Empty_14.Position = UDim2.new(0.5, 3, 0, 165)
+Empty_14.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_14.ZIndex = 2
+Empty_14.Font = Enum.Font.SourceSans
+Empty_14.Text = "Empty"
+Empty_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_14.TextSize = 14.000
+Empty_14.TextWrapped = true
+
+Empty_15.Name = "Empty"
+Empty_15.Parent = Misc
+Empty_15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_15.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_15.BorderSizePixel = 3
+Empty_15.Position = UDim2.new(0, 0, 0, 198)
+Empty_15.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_15.ZIndex = 3
+Empty_15.Font = Enum.Font.SourceSans
+Empty_15.Text = "Empty"
+Empty_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_15.TextSize = 14.000
+Empty_15.TextWrapped = true
+
+Empty_16.Name = "Empty"
+Empty_16.Parent = Misc
+Empty_16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_16.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_16.BorderSizePixel = 3
+Empty_16.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_16.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_16.ZIndex = 2
+Empty_16.Font = Enum.Font.SourceSans
+Empty_16.Text = "Empty"
+Empty_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_16.TextSize = 14.000
+Empty_16.TextWrapped = true
+
+Title_6.Name = "Title"
+Title_6.Parent = Misc
+Title_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_6.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_6.BorderSizePixel = 3
+Title_6.Size = UDim2.new(1, 0, 0, 30)
+Title_6.ZIndex = 2
+Title_6.Font = Enum.Font.SourceSansBold
+Title_6.Text = "Misc."
+Title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_6.TextSize = 14.000
+
+Page4.Name = "Page4"
+Page4.Parent = Frame
+Page4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page4.BorderSizePixel = 3
+Page4.Position = UDim2.new(0, 0, 0, 83)
+Page4.Size = UDim2.new(1, 0, 1, -106)
+Page4.Visible = false
+Page4.ZIndex = 2
+
+PresetMusicIDs.Name = "Preset Music IDs"
+PresetMusicIDs.Parent = Page4
+PresetMusicIDs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PresetMusicIDs.BorderColor3 = Color3.fromRGB(255, 0, 0)
+PresetMusicIDs.BorderSizePixel = 3
+PresetMusicIDs.Position = UDim2.new(0.5, 3, 0, 0)
+PresetMusicIDs.Size = UDim2.new(0.5, -3, 1, 0)
+PresetMusicIDs.ZIndex = 2
+
+ChopSuey.Name = "Chop Suey"
+ChopSuey.Parent = PresetMusicIDs
+ChopSuey.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ChopSuey.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ChopSuey.BorderSizePixel = 3
+ChopSuey.Position = UDim2.new(0, 0, 0, 33)
+ChopSuey.Size = UDim2.new(0.5, 0, 0, 30)
+ChopSuey.ZIndex = 2
+ChopSuey.Font = Enum.Font.SourceSans
+ChopSuey.Text = "Chop Suey"
+ChopSuey.TextColor3 = Color3.fromRGB(255, 255, 255)
+ChopSuey.TextSize = 14.000
+ChopSuey.TextWrapped = true
+
+ElectroSp00k.Name = "Electro Sp00k"
+ElectroSp00k.Parent = PresetMusicIDs
+ElectroSp00k.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ElectroSp00k.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ElectroSp00k.BorderSizePixel = 3
+ElectroSp00k.Position = UDim2.new(0.5, 3, 0, 33)
+ElectroSp00k.Size = UDim2.new(0.5, -3, 0, 30)
+ElectroSp00k.ZIndex = 2
+ElectroSp00k.Font = Enum.Font.SourceSans
+ElectroSp00k.Text = "Electro Sp00k"
+ElectroSp00k.TextColor3 = Color3.fromRGB(255, 255, 255)
+ElectroSp00k.TextSize = 14.000
+ElectroSp00k.TextWrapped = true
+
+Scream.Name = "Scream"
+Scream.Parent = PresetMusicIDs
+Scream.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Scream.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Scream.BorderSizePixel = 3
+Scream.Position = UDim2.new(0, 0, 0, 66)
+Scream.Size = UDim2.new(0.5, 0, 0, 30)
+Scream.ZIndex = 2
+Scream.Font = Enum.Font.SourceSans
+Scream.Text = "Scream"
+Scream.TextColor3 = Color3.fromRGB(255, 255, 255)
+Scream.TextSize = 14.000
+Scream.TextWrapped = true
+
+Wonga.Name = "Wonga"
+Wonga.Parent = PresetMusicIDs
+Wonga.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Wonga.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Wonga.BorderSizePixel = 3
+Wonga.Position = UDim2.new(0.5, 3, 0, 66)
+Wonga.Size = UDim2.new(0.5, -3, 0, 30)
+Wonga.ZIndex = 2
+Wonga.Font = Enum.Font.SourceSans
+Wonga.Text = "Wonga"
+Wonga.TextColor3 = Color3.fromRGB(255, 255, 255)
+Wonga.TextSize = 14.000
+Wonga.TextWrapped = true
+
+Empty_17.Name = "Empty"
+Empty_17.Parent = PresetMusicIDs
+Empty_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_17.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_17.BorderSizePixel = 3
+Empty_17.Position = UDim2.new(0, 0, 0, 99)
+Empty_17.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_17.ZIndex = 2
+Empty_17.Font = Enum.Font.SourceSans
+Empty_17.Text = "Empty"
+Empty_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_17.TextSize = 14.000
+Empty_17.TextWrapped = true
+
+Empty_18.Name = "Empty"
+Empty_18.Parent = PresetMusicIDs
+Empty_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_18.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_18.BorderSizePixel = 3
+Empty_18.Position = UDim2.new(0.5, 3, 0, 99)
+Empty_18.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_18.ZIndex = 2
+Empty_18.Font = Enum.Font.SourceSans
+Empty_18.Text = "Empty"
+Empty_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_18.TextSize = 14.000
+Empty_18.TextWrapped = true
+
+Empty_19.Name = "Empty"
+Empty_19.Parent = PresetMusicIDs
+Empty_19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_19.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_19.BorderSizePixel = 3
+Empty_19.Position = UDim2.new(0, 0, 0, 132)
+Empty_19.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_19.ZIndex = 2
+Empty_19.Font = Enum.Font.SourceSans
+Empty_19.Text = "Empty"
+Empty_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_19.TextSize = 14.000
+Empty_19.TextWrapped = true
+
+Empty_20.Name = "Empty"
+Empty_20.Parent = PresetMusicIDs
+Empty_20.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_20.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_20.BorderSizePixel = 3
+Empty_20.Position = UDim2.new(0.5, 3, 0, 132)
+Empty_20.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_20.ZIndex = 2
+Empty_20.Font = Enum.Font.SourceSans
+Empty_20.Text = "Empty"
+Empty_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_20.TextSize = 14.000
+Empty_20.TextWrapped = true
+
+Empty_21.Name = "Empty"
+Empty_21.Parent = PresetMusicIDs
+Empty_21.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_21.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_21.BorderSizePixel = 3
+Empty_21.Position = UDim2.new(0, 0, 0, 165)
+Empty_21.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_21.ZIndex = 2
+Empty_21.Font = Enum.Font.SourceSans
+Empty_21.Text = "Empty"
+Empty_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_21.TextSize = 14.000
+Empty_21.TextWrapped = true
+
+Empty_22.Name = "Empty"
+Empty_22.Parent = PresetMusicIDs
+Empty_22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_22.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_22.BorderSizePixel = 3
+Empty_22.Position = UDim2.new(0.5, 3, 0, 165)
+Empty_22.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_22.ZIndex = 2
+Empty_22.Font = Enum.Font.SourceSans
+Empty_22.Text = "Empty"
+Empty_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_22.TextSize = 14.000
+Empty_22.TextWrapped = true
+
+Empty_23.Name = "Empty"
+Empty_23.Parent = PresetMusicIDs
+Empty_23.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_23.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_23.BorderSizePixel = 3
+Empty_23.Position = UDim2.new(0, 0, 0, 198)
+Empty_23.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_23.ZIndex = 3
+Empty_23.Font = Enum.Font.SourceSans
+Empty_23.Text = "Empty"
+Empty_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_23.TextSize = 14.000
+Empty_23.TextWrapped = true
+
+Empty_24.Name = "Empty"
+Empty_24.Parent = PresetMusicIDs
+Empty_24.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_24.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_24.BorderSizePixel = 3
+Empty_24.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_24.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_24.ZIndex = 2
+Empty_24.Font = Enum.Font.SourceSans
+Empty_24.Text = "Empty"
+Empty_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_24.TextSize = 14.000
+Empty_24.TextWrapped = true
+
+Title_7.Name = "Title"
+Title_7.Parent = PresetMusicIDs
+Title_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_7.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_7.BorderSizePixel = 3
+Title_7.Size = UDim2.new(1, 0, 0, 30)
+Title_7.ZIndex = 2
+Title_7.Font = Enum.Font.SourceSansBold
+Title_7.Text = "Preset Music IDs"
+Title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_7.TextSize = 14.000
+Title_7.TextWrapped = true
+
+PresetSkyboxDecalIDs.Name = "Preset Skybox/Decal IDs"
+PresetSkyboxDecalIDs.Parent = Page4
+PresetSkyboxDecalIDs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PresetSkyboxDecalIDs.BorderColor3 = Color3.fromRGB(255, 0, 0)
+PresetSkyboxDecalIDs.BorderSizePixel = 3
+PresetSkyboxDecalIDs.Size = UDim2.new(0.5, -3, 1, 0)
+PresetSkyboxDecalIDs.ZIndex = 2
+
+Teamc00lkiddLogo1.Name = "Team c00lkidd Logo 1"
+Teamc00lkiddLogo1.Parent = PresetSkyboxDecalIDs
+Teamc00lkiddLogo1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Teamc00lkiddLogo1.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Teamc00lkiddLogo1.BorderSizePixel = 3
+Teamc00lkiddLogo1.Position = UDim2.new(0, 0, 0, 33)
+Teamc00lkiddLogo1.Size = UDim2.new(0.5, 0, 0, 30)
+Teamc00lkiddLogo1.ZIndex = 2
+Teamc00lkiddLogo1.Font = Enum.Font.SourceSans
+Teamc00lkiddLogo1.Text = "Team c00lkidd Logo 1"
+Teamc00lkiddLogo1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Teamc00lkiddLogo1.TextSize = 14.000
+Teamc00lkiddLogo1.TextWrapped = true
+
+Teamc00lkiddLogo2.Name = "Team c00lkidd Logo 2"
+Teamc00lkiddLogo2.Parent = PresetSkyboxDecalIDs
+Teamc00lkiddLogo2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Teamc00lkiddLogo2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Teamc00lkiddLogo2.BorderSizePixel = 3
+Teamc00lkiddLogo2.Position = UDim2.new(0.5, 3, 0, 33)
+Teamc00lkiddLogo2.Size = UDim2.new(0.5, -3, 0, 30)
+Teamc00lkiddLogo2.ZIndex = 2
+Teamc00lkiddLogo2.Font = Enum.Font.SourceSans
+Teamc00lkiddLogo2.Text = "Team c00lkidd Logo 2"
+Teamc00lkiddLogo2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Teamc00lkiddLogo2.TextSize = 14.000
+Teamc00lkiddLogo2.TextWrapped = true
+
+Thomas.Name = "Thomas"
+Thomas.Parent = PresetSkyboxDecalIDs
+Thomas.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Thomas.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Thomas.BorderSizePixel = 3
+Thomas.Position = UDim2.new(0, 0, 0, 66)
+Thomas.Size = UDim2.new(0.5, 0, 0, 30)
+Thomas.ZIndex = 2
+Thomas.Font = Enum.Font.SourceSans
+Thomas.Text = "Thomas"
+Thomas.TextColor3 = Color3.fromRGB(255, 255, 255)
+Thomas.TextSize = 14.000
+Thomas.TextWrapped = true
+
+c00lkidd.Name = "c00lkidd"
+c00lkidd.Parent = PresetSkyboxDecalIDs
+c00lkidd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c00lkidd.BorderColor3 = Color3.fromRGB(255, 0, 0)
+c00lkidd.BorderSizePixel = 3
+c00lkidd.Position = UDim2.new(0.5, 3, 0, 66)
+c00lkidd.Size = UDim2.new(0.5, -3, 0, 30)
+c00lkidd.ZIndex = 2
+c00lkidd.Font = Enum.Font.SourceSans
+c00lkidd.Text = "c00lkidd"
+c00lkidd.TextColor3 = Color3.fromRGB(255, 255, 255)
+c00lkidd.TextSize = 14.000
+c00lkidd.TextWrapped = true
+
+teamskrubl0rd.Name = "team skrubl0rd"
+teamskrubl0rd.Parent = PresetSkyboxDecalIDs
+teamskrubl0rd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+teamskrubl0rd.BorderColor3 = Color3.fromRGB(255, 0, 0)
+teamskrubl0rd.BorderSizePixel = 3
+teamskrubl0rd.Position = UDim2.new(0, 0, 0, 99)
+teamskrubl0rd.Size = UDim2.new(0.499000013, 0, 0, 30)
+teamskrubl0rd.ZIndex = 2
+teamskrubl0rd.Font = Enum.Font.SourceSans
+teamskrubl0rd.Text = "old team skrubl0rd"
+teamskrubl0rd.TextColor3 = Color3.fromRGB(255, 255, 255)
+teamskrubl0rd.TextSize = 14.000
+teamskrubl0rd.TextWrapped = true
+
+Empty_25.Name = "Empty"
+Empty_25.Parent = PresetSkyboxDecalIDs
+Empty_25.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_25.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_25.BorderSizePixel = 3
+Empty_25.Position = UDim2.new(0.5, 3, 0, 99)
+Empty_25.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_25.ZIndex = 2
+Empty_25.Font = Enum.Font.SourceSans
+Empty_25.Text = "Empty"
+Empty_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_25.TextSize = 14.000
+Empty_25.TextWrapped = true
+
+Empty_26.Name = "Empty"
+Empty_26.Parent = PresetSkyboxDecalIDs
+Empty_26.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_26.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_26.BorderSizePixel = 3
+Empty_26.Position = UDim2.new(0, 0, 0, 132)
+Empty_26.Size = UDim2.new(0.499000013, 0, 0, 30)
+Empty_26.ZIndex = 2
+Empty_26.Font = Enum.Font.SourceSans
+Empty_26.Text = "Empty"
+Empty_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_26.TextSize = 14.000
+Empty_26.TextWrapped = true
+
+Empty_27.Name = "Empty"
+Empty_27.Parent = PresetSkyboxDecalIDs
+Empty_27.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_27.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_27.BorderSizePixel = 3
+Empty_27.Position = UDim2.new(0.5, 3, 0, 132)
+Empty_27.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_27.ZIndex = 2
+Empty_27.Font = Enum.Font.SourceSans
+Empty_27.Text = "Empty"
+Empty_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_27.TextSize = 14.000
+Empty_27.TextWrapped = true
+
+Empty_28.Name = "Empty"
+Empty_28.Parent = PresetSkyboxDecalIDs
+Empty_28.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_28.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_28.BorderSizePixel = 3
+Empty_28.Position = UDim2.new(0, 0, 0, 165)
+Empty_28.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_28.ZIndex = 2
+Empty_28.Font = Enum.Font.SourceSans
+Empty_28.Text = "Empty"
+Empty_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_28.TextSize = 14.000
+Empty_28.TextWrapped = true
+
+Empty_29.Name = "Empty"
+Empty_29.Parent = PresetSkyboxDecalIDs
+Empty_29.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_29.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_29.BorderSizePixel = 3
+Empty_29.Position = UDim2.new(0.5, 3, 0, 165)
+Empty_29.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_29.ZIndex = 2
+Empty_29.Font = Enum.Font.SourceSans
+Empty_29.Text = "Empty"
+Empty_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_29.TextSize = 14.000
+Empty_29.TextWrapped = true
+
+Empty_30.Name = "Empty"
+Empty_30.Parent = PresetSkyboxDecalIDs
+Empty_30.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_30.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_30.BorderSizePixel = 3
+Empty_30.Position = UDim2.new(0, 0, 0, 198)
+Empty_30.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_30.ZIndex = 2
+Empty_30.Font = Enum.Font.SourceSans
+Empty_30.Text = "Empty"
+Empty_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_30.TextSize = 14.000
+Empty_30.TextWrapped = true
+
+Empty_31.Name = "Empty"
+Empty_31.Parent = PresetSkyboxDecalIDs
+Empty_31.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_31.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_31.BorderSizePixel = 3
+Empty_31.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_31.Size = UDim2.new(0.479999989, 0, 0, 30)
+Empty_31.ZIndex = 2
+Empty_31.Font = Enum.Font.SourceSans
+Empty_31.Text = "Empty"
+Empty_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_31.TextSize = 14.000
+Empty_31.TextWrapped = true
+
+Empty_32.Name = "Empty"
+Empty_32.Parent = PresetSkyboxDecalIDs
+Empty_32.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_32.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_32.BorderSizePixel = 3
+Empty_32.Position = UDim2.new(0, 0, 0, 231)
+Empty_32.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_32.ZIndex = 2
+Empty_32.Font = Enum.Font.SourceSans
+Empty_32.Text = "Empty"
+Empty_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_32.TextSize = 14.000
+Empty_32.TextWrapped = true
+
+Empty_33.Name = "Empty"
+Empty_33.Parent = PresetSkyboxDecalIDs
+Empty_33.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_33.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_33.BorderSizePixel = 3
+Empty_33.Position = UDim2.new(0.5, 3, 0, 231)
+Empty_33.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_33.ZIndex = 2
+Empty_33.Font = Enum.Font.SourceSans
+Empty_33.Text = "Empty"
+Empty_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_33.TextSize = 14.000
+Empty_33.TextWrapped = true
+
+Title_8.Name = "Title"
+Title_8.Parent = PresetSkyboxDecalIDs
+Title_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_8.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_8.BorderSizePixel = 3
+Title_8.Size = UDim2.new(1, 0, 0, 30)
+Title_8.ZIndex = 2
+Title_8.Font = Enum.Font.SourceSansBold
+Title_8.Text = "Preset Skybox/Decal IDs"
+Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_8.TextSize = 14.000
+
+Page5.Name = "Page5"
+Page5.Parent = Frame
+Page5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page5.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page5.BorderSizePixel = 3
+Page5.Position = UDim2.new(0, 0, 0, 83)
+Page5.Size = UDim2.new(1, 0, 1, -106)
+Page5.Visible = false
+Page5.ZIndex = 2
+
+End.Name = "End"
+End.Parent = Page5
+End.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+End.BorderColor3 = Color3.fromRGB(255, 0, 0)
+End.BorderSizePixel = 3
+End.Position = UDim2.new(0.5, 3, 0, 0)
+End.Size = UDim2.new(0.5, -3, 1, 0)
+End.ZIndex = 2
+
+Empty_34.Name = "Empty"
+Empty_34.Parent = End
+Empty_34.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_34.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_34.BorderSizePixel = 3
+Empty_34.Size = UDim2.new(1, 0, 1, 0)
+Empty_34.ZIndex = 2
+Empty_34.Font = Enum.Font.SourceSans
+Empty_34.Text = "Thank you for using c00lgui scripted! Addons coming soon! Post Ideas in the Thread!!!"
+Empty_34.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_34.TextSize = 14.000
+Empty_34.TextWrapped = true
+Empty_34.TextYAlignment = Enum.TextYAlignment.Top
+
+PresetGearIDs.Name = "Preset Gear IDs"
+PresetGearIDs.Parent = Page5
+PresetGearIDs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PresetGearIDs.BorderColor3 = Color3.fromRGB(255, 0, 0)
+PresetGearIDs.BorderSizePixel = 3
+PresetGearIDs.Size = UDim2.new(0.5, -3, 1, 0)
+PresetGearIDs.ZIndex = 2
+
+Airstrike.Name = "Airstrike"
+Airstrike.Parent = PresetGearIDs
+Airstrike.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Airstrike.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Airstrike.BorderSizePixel = 3
+Airstrike.Position = UDim2.new(0, 0, 0, 33)
+Airstrike.Size = UDim2.new(0.5, 0, 0, 30)
+Airstrike.ZIndex = 2
+Airstrike.Font = Enum.Font.SourceSans
+Airstrike.Text = "Airstrike"
+Airstrike.TextColor3 = Color3.fromRGB(255, 255, 255)
+Airstrike.TextSize = 14.000
+Airstrike.TextWrapped = true
+
+DualDarkhearts.Name = "Dual Darkhearts"
+DualDarkhearts.Parent = PresetGearIDs
+DualDarkhearts.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DualDarkhearts.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DualDarkhearts.BorderSizePixel = 3
+DualDarkhearts.Position = UDim2.new(0.5, 3, 0, 33)
+DualDarkhearts.Size = UDim2.new(0.5, -3, 0, 30)
+DualDarkhearts.ZIndex = 2
+DualDarkhearts.Font = Enum.Font.SourceSans
+DualDarkhearts.Text = "Dual Darkhearts"
+DualDarkhearts.TextColor3 = Color3.fromRGB(255, 255, 255)
+DualDarkhearts.TextSize = 14.000
+DualDarkhearts.TextWrapped = true
+
+DualVenomshanks.Name = "Dual Venomshanks"
+DualVenomshanks.Parent = PresetGearIDs
+DualVenomshanks.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DualVenomshanks.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DualVenomshanks.BorderSizePixel = 3
+DualVenomshanks.Position = UDim2.new(0, 0, 0, 66)
+DualVenomshanks.Size = UDim2.new(0.5, 0, 0, 30)
+DualVenomshanks.ZIndex = 2
+DualVenomshanks.Font = Enum.Font.SourceSans
+DualVenomshanks.Text = "Dual Venomshanks"
+DualVenomshanks.TextColor3 = Color3.fromRGB(255, 255, 255)
+DualVenomshanks.TextSize = 14.000
+DualVenomshanks.TextWrapped = true
+
+GhostfireSword.Name = "Ghostfire Sword"
+GhostfireSword.Parent = PresetGearIDs
+GhostfireSword.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GhostfireSword.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GhostfireSword.BorderSizePixel = 3
+GhostfireSword.Position = UDim2.new(0.5, 3, 0, 66)
+GhostfireSword.Size = UDim2.new(0.5, -3, 0, 30)
+GhostfireSword.ZIndex = 2
+GhostfireSword.Font = Enum.Font.SourceSans
+GhostfireSword.Text = "Ghostfire Sword"
+GhostfireSword.TextColor3 = Color3.fromRGB(255, 255, 255)
+GhostfireSword.TextSize = 14.000
+GhostfireSword.TextWrapped = true
+
+GravityCoil.Name = "Gravity Coil"
+GravityCoil.Parent = PresetGearIDs
+GravityCoil.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GravityCoil.BorderColor3 = Color3.fromRGB(255, 0, 0)
+GravityCoil.BorderSizePixel = 3
+GravityCoil.Position = UDim2.new(0, 0, 0, 99)
+GravityCoil.Size = UDim2.new(0.499000013, 0, 0, 30)
+GravityCoil.ZIndex = 2
+GravityCoil.Font = Enum.Font.SourceSans
+GravityCoil.Text = "Gravity Coil"
+GravityCoil.TextColor3 = Color3.fromRGB(255, 255, 255)
+GravityCoil.TextSize = 14.000
+GravityCoil.TextWrapped = true
+
+Hyperbike.Name = "Hyperbike"
+Hyperbike.Parent = PresetGearIDs
+Hyperbike.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Hyperbike.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Hyperbike.BorderSizePixel = 3
+Hyperbike.Position = UDim2.new(0.5, 3, 0, 99)
+Hyperbike.Size = UDim2.new(0.5, -3, 0, 30)
+Hyperbike.ZIndex = 2
+Hyperbike.Font = Enum.Font.SourceSans
+Hyperbike.Text = "Hyperbike"
+Hyperbike.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hyperbike.TextSize = 14.000
+Hyperbike.TextWrapped = true
+
+Icedagger.Name = "Icedagger"
+Icedagger.Parent = PresetGearIDs
+Icedagger.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Icedagger.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Icedagger.BorderSizePixel = 3
+Icedagger.Position = UDim2.new(0, 0, 0, 132)
+Icedagger.Size = UDim2.new(0.499000013, 0, 0, 30)
+Icedagger.ZIndex = 2
+Icedagger.Font = Enum.Font.SourceSans
+Icedagger.Text = "Icedagger"
+Icedagger.TextColor3 = Color3.fromRGB(255, 255, 255)
+Icedagger.TextSize = 14.000
+Icedagger.TextWrapped = true
+
+LinkedSword.Name = "Linked Sword"
+LinkedSword.Parent = PresetGearIDs
+LinkedSword.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LinkedSword.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LinkedSword.BorderSizePixel = 3
+LinkedSword.Position = UDim2.new(0.5, 3, 0, 132)
+LinkedSword.Size = UDim2.new(0.5, -3, 0, 30)
+LinkedSword.ZIndex = 2
+LinkedSword.Font = Enum.Font.SourceSans
+LinkedSword.Text = "Linked Sword"
+LinkedSword.TextColor3 = Color3.fromRGB(255, 255, 255)
+LinkedSword.TextSize = 14.000
+LinkedSword.TextWrapped = true
+
+Empty_35.Name = "Empty"
+Empty_35.Parent = PresetGearIDs
+Empty_35.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_35.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_35.BorderSizePixel = 3
+Empty_35.Position = UDim2.new(0, 0, 0, 165)
+Empty_35.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_35.ZIndex = 2
+Empty_35.Font = Enum.Font.SourceSans
+Empty_35.Text = "Empty"
+Empty_35.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_35.TextSize = 14.000
+Empty_35.TextWrapped = true
+
+Empty_36.Name = "Empty"
+Empty_36.Parent = PresetGearIDs
+Empty_36.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_36.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_36.BorderSizePixel = 3
+Empty_36.Position = UDim2.new(0.5, 3, 0, 165)
+Empty_36.Size = UDim2.new(0.5, -3, 0, 30)
+Empty_36.ZIndex = 2
+Empty_36.Font = Enum.Font.SourceSans
+Empty_36.Text = "Empty"
+Empty_36.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_36.TextSize = 14.000
+Empty_36.TextWrapped = true
+
+Empty_37.Name = "Empty"
+Empty_37.Parent = PresetGearIDs
+Empty_37.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_37.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_37.BorderSizePixel = 3
+Empty_37.Position = UDim2.new(0, 0, 0, 198)
+Empty_37.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_37.ZIndex = 2
+Empty_37.Font = Enum.Font.SourceSans
+Empty_37.Text = "Empty"
+Empty_37.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_37.TextSize = 14.000
+Empty_37.TextWrapped = true
+
+Empty_38.Name = "Empty"
+Empty_38.Parent = PresetGearIDs
+Empty_38.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_38.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_38.BorderSizePixel = 3
+Empty_38.Position = UDim2.new(0.5, 3, 0, 198)
+Empty_38.Size = UDim2.new(0.479999989, 0, 0, 30)
+Empty_38.ZIndex = 2
+Empty_38.Font = Enum.Font.SourceSans
+Empty_38.Text = "Empty"
+Empty_38.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_38.TextSize = 14.000
+Empty_38.TextWrapped = true
+
+Empty_39.Name = "Empty"
+Empty_39.Parent = PresetGearIDs
+Empty_39.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Empty_39.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Empty_39.BorderSizePixel = 3
+Empty_39.Position = UDim2.new(0, 0, 0, 231)
+Empty_39.Size = UDim2.new(0.5, 0, 0, 30)
+Empty_39.ZIndex = 2
+Empty_39.Font = Enum.Font.SourceSans
+Empty_39.Text = "Empty"
+Empty_39.TextColor3 = Color3.fromRGB(255, 255, 255)
+Empty_39.TextSize = 14.000
+Empty_39.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = Frame
+Settings.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Settings.BorderSizePixel = 3
+Settings.Position = UDim2.new(1, 3, 0, 0)
+Settings.Size = UDim2.new(1, 0, 1, 0)
+
+Page1_2.Name = "Page1"
+Page1_2.Parent = Settings
+Page1_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page1_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page1_2.BorderSizePixel = 3
+Page1_2.Position = UDim2.new(0, 0, 0, 83)
+Page1_2.Size = UDim2.new(1, 0, 1, -83)
+
+BillboardGuiText.Name = "Billboard Gui Text"
+BillboardGuiText.Parent = Page1_2
+BillboardGuiText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BillboardGuiText.BorderColor3 = Color3.fromRGB(255, 0, 0)
+BillboardGuiText.BorderSizePixel = 3
+BillboardGuiText.Position = UDim2.new(0.5, 3, 0, 198)
+BillboardGuiText.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox.Parent = BillboardGuiText
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.BorderSizePixel = 3
+TextBox.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "c00lkidd"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+
+Title_9.Name = "Title"
+Title_9.Parent = BillboardGuiText
+Title_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_9.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_9.BorderSizePixel = 3
+Title_9.Size = UDim2.new(1, 0, 0, 30)
+Title_9.Font = Enum.Font.SourceSansBold
+Title_9.Text = "Billboard Gui Text"
+Title_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_9.TextSize = 14.000
+Title_9.TextWrapped = true
+
+CustomGearID.Name = "Custom Gear ID"
+CustomGearID.Parent = Page1_2
+CustomGearID.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CustomGearID.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CustomGearID.BorderSizePixel = 3
+CustomGearID.Position = UDim2.new(0, 0, 0, 198)
+CustomGearID.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextBox_2.Parent = CustomGearID
+TextBox_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_2.BorderSizePixel = 3
+TextBox_2.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_2.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.Text = "108149175"
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextSize = 14.000
+
+Title_10.Name = "Title"
+Title_10.Parent = CustomGearID
+Title_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_10.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_10.BorderSizePixel = 3
+Title_10.Size = UDim2.new(1, 0, 0, 30)
+Title_10.Font = Enum.Font.SourceSansBold
+Title_10.Text = "Custom Gear ID"
+Title_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_10.TextSize = 14.000
+
+God.Name = "God"
+God.Parent = Page1_2
+God.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+God.BorderColor3 = Color3.fromRGB(255, 0, 0)
+God.BorderSizePixel = 3
+God.Position = UDim2.new(0, 0, 0, 132)
+God.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextButton.Parent = God
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.BorderSizePixel = 3
+TextButton.Position = UDim2.new(0, 0, 0.5, 0)
+TextButton.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "On"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+Title_11.Name = "Title"
+Title_11.Parent = God
+Title_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_11.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_11.BorderSizePixel = 3
+Title_11.Size = UDim2.new(1, 0, 0, 30)
+Title_11.Font = Enum.Font.SourceSansBold
+Title_11.Text = "God"
+Title_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_11.TextSize = 14.000
+Title_11.TextWrapped = true
+
+Invisibility.Name = "Invisibility"
+Invisibility.Parent = Page1_2
+Invisibility.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Invisibility.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Invisibility.BorderSizePixel = 3
+Invisibility.Position = UDim2.new(0.5, 3, 0, 132)
+Invisibility.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextButton_2.Parent = Invisibility
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_2.BorderSizePixel = 3
+TextButton_2.Position = UDim2.new(0, 0, 0.5, 0)
+TextButton_2.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "On"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+
+Title_12.Name = "Title"
+Title_12.Parent = Invisibility
+Title_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_12.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_12.BorderSizePixel = 3
+Title_12.Size = UDim2.new(1, 0, 0, 30)
+Title_12.Font = Enum.Font.SourceSansBold
+Title_12.Text = "Invisibility"
+Title_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_12.TextSize = 14.000
+Title_12.TextWrapped = true
+
+MusicID.Name = "Music ID"
+MusicID.Parent = Page1_2
+MusicID.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MusicID.BorderColor3 = Color3.fromRGB(255, 0, 0)
+MusicID.BorderSizePixel = 3
+MusicID.Position = UDim2.new(0, 0, 0, 66)
+MusicID.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextBox_3.Parent = MusicID
+TextBox_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_3.BorderSizePixel = 3
+TextBox_3.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_3.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_3.Font = Enum.Font.SourceSans
+TextBox_3.Text = "142930454"
+TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_3.TextSize = 14.000
+
+Title_13.Name = "Title"
+Title_13.Parent = MusicID
+Title_13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_13.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_13.BorderSizePixel = 3
+Title_13.Size = UDim2.new(1, 0, 0, 30)
+Title_13.Font = Enum.Font.SourceSansBold
+Title_13.Text = "Music ID"
+Title_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_13.TextSize = 14.000
+
+MusicPitch.Name = "Music Pitch"
+MusicPitch.Parent = Page1_2
+MusicPitch.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MusicPitch.BorderColor3 = Color3.fromRGB(255, 0, 0)
+MusicPitch.BorderSizePixel = 3
+MusicPitch.Position = UDim2.new(0.5, 3, 0, 66)
+MusicPitch.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox_4.Parent = MusicPitch
+TextBox_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_4.BorderSizePixel = 3
+TextBox_4.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_4.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_4.Font = Enum.Font.SourceSans
+TextBox_4.Text = "1"
+TextBox_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_4.TextSize = 14.000
+
+Title_14.Name = "Title"
+Title_14.Parent = MusicPitch
+Title_14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_14.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_14.BorderSizePixel = 3
+Title_14.Size = UDim2.new(1, 0, 0, 30)
+Title_14.Font = Enum.Font.SourceSansBold
+Title_14.Text = "Music Pitch"
+Title_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_14.TextSize = 14.000
+
+PlaceID.Name = "Place ID"
+PlaceID.Parent = Page1_2
+PlaceID.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlaceID.BorderColor3 = Color3.fromRGB(255, 0, 0)
+PlaceID.BorderSizePixel = 3
+PlaceID.Position = UDim2.new(0.5, 3, 0, 0)
+PlaceID.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox_5.Parent = PlaceID
+TextBox_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_5.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_5.BorderSizePixel = 3
+TextBox_5.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_5.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_5.Font = Enum.Font.SourceSans
+TextBox_5.Text = "149559312"
+TextBox_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_5.TextSize = 14.000
+
+Title_15.Name = "Title"
+Title_15.Parent = PlaceID
+Title_15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_15.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_15.BorderSizePixel = 3
+Title_15.Size = UDim2.new(1, 0, 0, 30)
+Title_15.Font = Enum.Font.SourceSansBold
+Title_15.Text = "Place ID"
+Title_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_15.TextSize = 14.000
+
+SkyboxDecalID.Name = "Skybox/Decal ID"
+SkyboxDecalID.Parent = Page1_2
+SkyboxDecalID.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SkyboxDecalID.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SkyboxDecalID.BorderSizePixel = 3
+SkyboxDecalID.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextBox_6.Parent = SkyboxDecalID
+TextBox_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_6.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_6.BorderSizePixel = 3
+TextBox_6.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_6.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_6.Font = Enum.Font.SourceSans
+TextBox_6.Text = "158118263"
+TextBox_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_6.TextSize = 14.000
+
+Title_16.Name = "Title"
+Title_16.Parent = SkyboxDecalID
+Title_16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_16.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_16.BorderSizePixel = 3
+Title_16.Size = UDim2.new(1, 0, 0, 30)
+Title_16.Font = Enum.Font.SourceSansBold
+Title_16.Text = "Skybox/Decal ID"
+Title_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_16.TextSize = 14.000
+
+Page2_2.Name = "Page2"
+Page2_2.Parent = Settings
+Page2_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page2_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page2_2.BorderSizePixel = 3
+Page2_2.Position = UDim2.new(0, 0, 0, 83)
+Page2_2.Size = UDim2.new(1, 0, 1, -83)
+Page2_2.Visible = false
+
+AntiRobloxianRange.Name = "Anti Robloxian Range"
+AntiRobloxianRange.Parent = Page2_2
+AntiRobloxianRange.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AntiRobloxianRange.BorderColor3 = Color3.fromRGB(255, 0, 0)
+AntiRobloxianRange.BorderSizePixel = 3
+AntiRobloxianRange.Position = UDim2.new(0.5, 3, 0, 198)
+AntiRobloxianRange.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox_7.Parent = AntiRobloxianRange
+TextBox_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_7.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_7.BorderSizePixel = 3
+TextBox_7.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_7.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_7.Font = Enum.Font.SourceSans
+TextBox_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_7.TextSize = 14.000
+
+Title_17.Name = "Title"
+Title_17.Parent = AntiRobloxianRange
+Title_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_17.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_17.BorderSizePixel = 3
+Title_17.Size = UDim2.new(1, 0, 0, 30)
+Title_17.Font = Enum.Font.SourceSansBold
+Title_17.Text = "Anti Robloxian Rage"
+Title_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_17.TextSize = 14.000
+Title_17.TextWrapped = true
+
+BillboardGuiColor.Name = "Billboard Gui Color"
+BillboardGuiColor.Parent = Page2_2
+BillboardGuiColor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BillboardGuiColor.BorderColor3 = Color3.fromRGB(255, 0, 0)
+BillboardGuiColor.BorderSizePixel = 3
+BillboardGuiColor.Position = UDim2.new(0, 0, 0, 198)
+BillboardGuiColor.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextBox1.Name = "TextBox1"
+TextBox1.Parent = BillboardGuiColor
+TextBox1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox1.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox1.BorderSizePixel = 3
+TextBox1.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox1.Size = UDim2.new(0, 50, 0.5, -1)
+TextBox1.Font = Enum.Font.SourceSans
+TextBox1.Text = "200"
+TextBox1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox1.TextSize = 14.000
+
+TextBox2.Name = "TextBox2"
+TextBox2.Parent = BillboardGuiColor
+TextBox2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox2.BorderSizePixel = 3
+TextBox2.Position = UDim2.new(0, 50, 0.5, 0)
+TextBox2.Size = UDim2.new(0, 50, 0.5, -1)
+TextBox2.Font = Enum.Font.SourceSans
+TextBox2.Text = "0"
+TextBox2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox2.TextSize = 14.000
+
+TextBox3.Name = "TextBox3"
+TextBox3.Parent = BillboardGuiColor
+TextBox3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox3.BorderSizePixel = 3
+TextBox3.Position = UDim2.new(0, 100, 0.5, 0)
+TextBox3.Size = UDim2.new(0, 50, 0.5, -1)
+TextBox3.Font = Enum.Font.SourceSans
+TextBox3.Text = "0"
+TextBox3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox3.TextSize = 14.000
+
+Title_18.Name = "Title"
+Title_18.Parent = BillboardGuiColor
+Title_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_18.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_18.BorderSizePixel = 3
+Title_18.Size = UDim2.new(1, 0, 0, 30)
+Title_18.Font = Enum.Font.SourceSansBold
+Title_18.Text = "Billboard Gui Color"
+Title_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_18.TextSize = 14.000
+Title_18.TextWrapped = true
+
+ChatSpamText.Name = "Chat Spam Text"
+ChatSpamText.Parent = Page2_2
+ChatSpamText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ChatSpamText.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ChatSpamText.BorderSizePixel = 3
+ChatSpamText.Position = UDim2.new(0, 0, 0, 132)
+ChatSpamText.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextBox_8.Parent = ChatSpamText
+TextBox_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_8.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_8.BorderSizePixel = 3
+TextBox_8.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_8.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_8.Font = Enum.Font.SourceSans
+TextBox_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_8.TextSize = 14.000
+
+Title_19.Name = "Title"
+Title_19.Parent = ChatSpamText
+Title_19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_19.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_19.BorderSizePixel = 3
+Title_19.Size = UDim2.new(1, 0, 0, 30)
+Title_19.Font = Enum.Font.SourceSansBold
+Title_19.Text = "Chat Spam Text"
+Title_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_19.TextSize = 14.000
+Title_19.TextWrapped = true
+
+LeaderstatAmount.Name = "Leaderstat Amount"
+LeaderstatAmount.Parent = Page2_2
+LeaderstatAmount.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LeaderstatAmount.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LeaderstatAmount.BorderSizePixel = 3
+LeaderstatAmount.Position = UDim2.new(0.5, 3, 0, 132)
+LeaderstatAmount.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox_9.Parent = LeaderstatAmount
+TextBox_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_9.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_9.BorderSizePixel = 3
+TextBox_9.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_9.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_9.Font = Enum.Font.SourceSans
+TextBox_9.Text = "50"
+TextBox_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_9.TextSize = 14.000
+
+Title_20.Name = "Title"
+Title_20.Parent = LeaderstatAmount
+Title_20.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_20.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_20.BorderSizePixel = 3
+Title_20.Size = UDim2.new(1, 0, 0, 30)
+Title_20.Font = Enum.Font.SourceSansBold
+Title_20.Text = "Leaderstat Amount"
+Title_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_20.TextSize = 14.000
+Title_20.TextWrapped = true
+
+LeaderstatName.Name = "Leaderstat Name"
+LeaderstatName.Parent = Page2_2
+LeaderstatName.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LeaderstatName.BorderColor3 = Color3.fromRGB(255, 0, 0)
+LeaderstatName.BorderSizePixel = 3
+LeaderstatName.Position = UDim2.new(0, 0, 0, 66)
+LeaderstatName.Size = UDim2.new(0.5, 0, 0, 63)
+
+TextBox_10.Parent = LeaderstatName
+TextBox_10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_10.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_10.BorderSizePixel = 3
+TextBox_10.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_10.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_10.Font = Enum.Font.SourceSans
+TextBox_10.Text = "KOs"
+TextBox_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_10.TextSize = 14.000
+
+Title_21.Name = "Title"
+Title_21.Parent = LeaderstatName
+Title_21.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_21.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_21.BorderSizePixel = 3
+Title_21.Size = UDim2.new(1, 0, 0, 30)
+Title_21.Font = Enum.Font.SourceSansBold
+Title_21.Text = "Leaderstat Name"
+Title_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_21.TextSize = 14.000
+Title_21.TextWrapped = true
+
+NameBox.Name = "Name Box"
+NameBox.Parent = Page2_2
+NameBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NameBox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+NameBox.BorderSizePixel = 3
+NameBox.Position = UDim2.new(0.5, 3, 0, 66)
+NameBox.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox_11.Parent = NameBox
+TextBox_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_11.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_11.BorderSizePixel = 3
+TextBox_11.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_11.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_11.Font = Enum.Font.SourceSans
+TextBox_11.Text = "God"
+TextBox_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_11.TextSize = 14.000
+
+Title_22.Name = "Title"
+Title_22.Parent = NameBox
+Title_22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_22.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_22.BorderSizePixel = 3
+Title_22.Size = UDim2.new(1, 0, 0, 30)
+Title_22.Font = Enum.Font.SourceSansBold
+Title_22.Text = "Name"
+Title_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_22.TextSize = 14.000
+Title_22.TextWrapped = true
+
+WalkspeedAmount.Name = "Walkspeed Amount"
+WalkspeedAmount.Parent = Page2_2
+WalkspeedAmount.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WalkspeedAmount.BorderColor3 = Color3.fromRGB(255, 0, 0)
+WalkspeedAmount.BorderSizePixel = 3
+WalkspeedAmount.Position = UDim2.new(0.5, 3, 0, 0)
+WalkspeedAmount.Size = UDim2.new(0.5, -3, 0, 63)
+
+TextBox_12.Parent = WalkspeedAmount
+TextBox_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_12.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox_12.BorderSizePixel = 3
+TextBox_12.Position = UDim2.new(0, 0, 0.5, 0)
+TextBox_12.Size = UDim2.new(0.99000001, 1, 0.5, -1)
+TextBox_12.Font = Enum.Font.SourceSans
+TextBox_12.Text = "50"
+TextBox_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_12.TextSize = 14.000
+
+Title_23.Name = "Title"
+Title_23.Parent = WalkspeedAmount
+Title_23.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_23.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_23.BorderSizePixel = 3
+Title_23.Size = UDim2.new(1, 0, 0, 30)
+Title_23.Font = Enum.Font.SourceSansBold
+Title_23.Text = "Walkspeed Amount"
+Title_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_23.TextSize = 14.000
+Title_23.TextWrapped = true
+
+TextButton_3.Name = ">"
+TextButton_3.Parent = Settings
+TextButton_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_3.BorderSizePixel = 3
+TextButton_3.Position = UDim2.new(0.5, 3, 0, 40)
+TextButton_3.Size = UDim2.new(0.5, -3, 0, 40)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = ">"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 48.000
+
+TextButton_4.Name = "<"
+TextButton_4.Parent = Settings
+TextButton_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_4.BorderSizePixel = 3
+TextButton_4.Position = UDim2.new(0, 0, 0, 40)
+TextButton_4.Size = UDim2.new(0.5, 0, 0, 40)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "<"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 48.000
+
+SettingsButton.Name = "SettingsButton"
+SettingsButton.Parent = Settings
+SettingsButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SettingsButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SettingsButton.BorderSizePixel = 3
+SettingsButton.Position = UDim2.new(1, 3, 0, 0)
+SettingsButton.Size = UDim2.new(0, 27, 1, 0)
+SettingsButton.Font = Enum.Font.SourceSans
+SettingsButton.Text = "<"
+SettingsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsButton.TextSize = 48.000
+
+Title_24.Name = "Title"
+Title_24.Parent = Settings
+Title_24.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_24.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_24.BorderSizePixel = 3
+Title_24.Size = UDim2.new(1, 0, 0, 40)
+Title_24.Font = Enum.Font.SourceSans
+Title_24.Text = "Settings"
+Title_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_24.TextSize = 24.000
+
+TextButton_5.Name = ">"
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_5.BorderSizePixel = 3
+TextButton_5.Position = UDim2.new(0.5, 3, 0, 40)
+TextButton_5.Size = UDim2.new(0.5, -3, 0, 40)
+TextButton_5.ZIndex = 2
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = ">"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 48.000
+
+TextButton_6.Name = "<"
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_6.BorderSizePixel = 3
+TextButton_6.Position = UDim2.new(0, 0, 0, 40)
+TextButton_6.Size = UDim2.new(0.5, -3, 0, 40)
+TextButton_6.ZIndex = 2
+TextButton_6.Font = Enum.Font.SourceSans
+TextButton_6.Text = "<"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextSize = 48.000
+
+Title_25.Name = "Title"
+Title_25.Parent = Frame
+Title_25.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title_25.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Title_25.BorderSizePixel = 3
+Title_25.Size = UDim2.new(1, 0, 0, 40)
+Title_25.ZIndex = 2
+Title_25.Font = Enum.Font.SourceSans
+Title_25.Text = "c00lgui Reborn CendicateHax"
+Title_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_25.TextSize = 24.000
+
+CloseOpen.Name = "Close/Open"
+CloseOpen.Parent = culgui
+CloseOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseOpen.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CloseOpen.BorderSizePixel = 3
+CloseOpen.Position = UDim2.new(0, 3, 0.300000012, 380)
+CloseOpen.Size = UDim2.new(0, 300, 0, 20)
+CloseOpen.ZIndex = 3
+CloseOpen.Font = Enum.Font.SourceSans
+CloseOpen.Text = "Close"
+CloseOpen.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
+CloseOpen.TextSize = 18.000
+
+-- Scripts:
+
+local function OLKJT_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(OLKJT_fake_script)()
+local function HEVLP_fake_script() -- TextBox_2.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_2)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(HEVLP_fake_script)()
+local function FHAYGIF_fake_script() -- TextBox_3.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_3)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(FHAYGIF_fake_script)()
+local function BYNNS_fake_script() -- TextBox_4.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_4)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(BYNNS_fake_script)()
+local function ZVFWNYK_fake_script() -- TextBox_5.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_5)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(ZVFWNYK_fake_script)()
+local function KWMR_fake_script() -- TextBox_6.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_6)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(KWMR_fake_script)()
+local function QKIIPG_fake_script() -- TextBox1.LocalScript 
+	local script = Instance.new('LocalScript', TextBox1)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(QKIIPG_fake_script)()
+local function GIPDZOL_fake_script() -- TextBox2.LocalScript 
+	local script = Instance.new('LocalScript', TextBox2)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(GIPDZOL_fake_script)()
+local function MNQDH_fake_script() -- TextBox3.LocalScript 
+	local script = Instance.new('LocalScript', TextBox3)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(MNQDH_fake_script)()
+local function EXVUWSZ_fake_script() -- TextBox_9.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_9)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(EXVUWSZ_fake_script)()
+local function ZLTEEB_fake_script() -- TextBox_10.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_10)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(ZLTEEB_fake_script)()
+local function LWGMTYF_fake_script() -- TextBox_11.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_11)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(LWGMTYF_fake_script)()
+local function TPJJKE_fake_script() -- TextBox_12.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_12)
+
+	script.Parent.FocusLost:connect(function()
+	script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end
+coroutine.wrap(TPJJKE_fake_script)()
