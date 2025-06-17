@@ -1,0 +1,133 @@
+-- By aminos_055
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "create_by_aminos_055"
+screenGui.Parent = game.CoreGui
+screenGui.ResetOnSpawn = false
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 250, 0, 120)
+frame.Position = UDim2.new(0.5, -125, 0.5, -60)
+frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+frame.BorderSizePixel = 0
+frame.Active = true
+frame.Parent = screenGui
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 30)
+title.BackgroundTransparency = 1
+title.Text = "create by aminos_055"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 20
+title.Parent = frame
+
+local espToggle = Instance.new("TextButton")
+espToggle.Size = UDim2.new(0, 200, 0, 50)
+espToggle.Position = UDim2.new(0.5, -100, 0.5, -10)
+espToggle.BackgroundColor3 = Color3.fromRGB(70, 130, 180)
+espToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+espToggle.Font = Enum.Font.SourceSansBold
+espToggle.TextSize = 18
+espToggle.Text = "ESP OFF"
+espToggle.Parent = frame
+
+-- Drag & drop mobile + mouse
+
+local UserInputService = game:GetService("UserInputService")
+local dragging = false
+local dragInput = nil
+local dragStart = nil
+local startPos = nil
+
+local function update(input)
+local delta = input.Position - dragStart
+frame.Position = UDim2.new(
+startPos.X.Scale,
+startPos.X.Offset + delta.X,
+startPos.Y.Scale,
+startPos.Y.Offset + delta.Y
+)
+end
+
+frame.InputBegan:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1 or
+input.UserInputType == Enum.UserInputType.Touch then
+dragging = true
+dragStart = input.Position
+startPos = frame.Position
+
+input.Changed:Connect(function()  
+        if input.UserInputState == Enum.UserInputState.End then  
+            dragging = false  
+        end  
+    end)  
+end
+
+end)
+
+frame.InputChanged:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseMovement or
+input.UserInputType == Enum.UserInputType.Touch then
+dragInput = input
+end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+if input == dragInput and dragging then
+update(input)
+end
+end)
+
+-- ESP
+
+local espOn = false
+local espBoxes = {}
+
+local function createBox(player)
+local box = Instance.new("BoxHandleAdornment")
+box.Adornee = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+box.AlwaysOnTop = true
+box.ZIndex = 10
+box.Size = Vector3.new(4, 6, 1)
+box.Transparency = 0.5
+box.Color3 = Color3.fromRGB(255, 0, 0)
+box.Parent = workspace
+return box
+end
+
+local function removeBoxes()
+for _, box in pairs(espBoxes) do
+if box and box.Parent then
+box:Destroy()
+end
+end
+espBoxes = {}
+end
+
+local function updateBoxes()
+removeBoxes()
+for _, player in pairs(game.Players:GetPlayers()) do
+if player ~= game.Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+local box = createBox(player)
+table.insert(espBoxes, box)
+end
+end
+end
+
+espToggle.MouseButton1Click:Connect(function()
+espOn = not espOn
+if espOn then
+espToggle.Text = "ESP ON"
+updateBoxes()
+else
+espToggle.Text = "ESP OFF"
+removeBoxes()
+end
+end)
+
+game:GetService("RunService").Stepped:Connect(function()
+if espOn then
+updateBoxes()
+end
+end)
+
