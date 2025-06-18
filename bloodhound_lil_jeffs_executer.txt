@@ -1,0 +1,508 @@
+--[[https://discord.gg/4THYgrRQd3 - site: https://xeonhub.netlify.app/]]--
+
+local gui = {};
+
+gui.screenGui = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+gui.screenGui.Name = "KrakenExecutor";
+gui.screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+
+gui.mainFrame = Instance.new("Frame", gui.screenGui);
+gui.mainFrame.BorderSizePixel = 0;
+gui.mainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+gui.mainFrame.Size = UDim2.new(0, 364, 0, 423);
+gui.mainFrame.Position = UDim2.new(0.36015, 0, 0.23632, 0);
+gui.mainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.mainFrame.Name = "MainFrame";
+
+gui.dragScript = Instance.new("LocalScript", gui.mainFrame);
+gui.dragScript.Name = "DragScript";
+
+gui.mainFrameCorner = Instance.new("UICorner", gui.mainFrame);
+gui.mainFrameCorner.CornerRadius = UDim.new(0, 15);
+
+gui.titleLabel = Instance.new("TextLabel", gui.mainFrame);
+gui.titleLabel.TextWrapped = true;
+gui.titleLabel.BorderSizePixel = 0;
+gui.titleLabel.TextSize = 14;
+gui.titleLabel.TextScaled = true;
+gui.titleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+gui.titleLabel.FontFace = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+gui.titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255);
+gui.titleLabel.BackgroundTransparency = 1;
+gui.titleLabel.RichText = true;
+gui.titleLabel.Size = UDim2.new(0, 86, 0, 22);
+gui.titleLabel.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.titleLabel.Text = "Executer";
+gui.titleLabel.Name = "TitleLabel";
+gui.titleLabel.Position = UDim2.new(0.36264, 0, 0, 2.5);
+
+gui.resizeBar = Instance.new("Frame", gui.mainFrame);
+gui.resizeBar.BorderSizePixel = 0;
+gui.resizeBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+gui.resizeBar.Size = UDim2.new(0, 100, 0, 5);
+gui.resizeBar.Position = UDim2.new(0.36264, 0, 1, 5);
+gui.resizeBar.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.resizeBar.Name = "ResizeBar";
+
+gui.resizeBarCorner = Instance.new("UICorner", gui.resizeBar);
+gui.resizeBarCorner.CornerRadius = UDim.new(0, 15);
+
+gui.resizeBarGradient = Instance.new("UIGradient", gui.resizeBar);
+gui.resizeBarGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(69, 69, 69)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(69, 69, 69))};
+
+gui.resizeScript = Instance.new("LocalScript", gui.resizeBar);
+gui.resizeScript.Name = "ResizeScript";
+
+gui.mainFrameGradient = Instance.new("UIGradient", gui.mainFrame);
+gui.mainFrameGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(69, 69, 69)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(69, 69, 69))};
+
+gui.executeButton = Instance.new("TextButton", gui.mainFrame);
+gui.executeButton.BorderSizePixel = 0;
+gui.executeButton.TextSize = 14;
+gui.executeButton.TextColor3 = Color3.fromRGB(255, 255, 255);
+gui.executeButton.BackgroundColor3 = Color3.fromRGB(69, 69, 69);
+gui.executeButton.FontFace = Font.new("rbxasset://fonts/families/Gotham.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+gui.executeButton.Size = UDim2.new(1, -20, 0, 30);
+gui.executeButton.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.executeButton.Text = "Execute";
+gui.executeButton.Name = "ExecuteButton";
+gui.executeButton.Position = UDim2.new(0, 10, 1, -40);
+
+gui.executeButtonCorner = Instance.new("UICorner", gui.executeButton);
+gui.executeButtonCorner.CornerRadius = UDim.new(0, 15);
+
+gui.executeScript = Instance.new("LocalScript", gui.executeButton);
+gui.executeScript.Name = "ExecuteScript";
+
+gui.editorFrame = Instance.new("Frame", gui.mainFrame);
+gui.editorFrame.BorderSizePixel = 0;
+gui.editorFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+gui.editorFrame.Size = UDim2.new(1, -20, 1, -80);
+gui.editorFrame.Position = UDim2.new(0, 10, 0, 30);
+gui.editorFrame.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.editorFrame.Name = "EditorFrame";
+
+gui.syntaxHighlight = Instance.new("TextLabel", gui.editorFrame);
+gui.syntaxHighlight.BorderSizePixel = 0;
+gui.syntaxHighlight.TextSize = 14;
+gui.syntaxHighlight.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+gui.syntaxHighlight.FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+gui.syntaxHighlight.TextColor3 = Color3.fromRGB(255, 255, 255);
+gui.syntaxHighlight.RichText = true;
+gui.syntaxHighlight.Size = UDim2.new(1, -35, 1, 0);
+gui.syntaxHighlight.Position = UDim2.new(0, 35, 0, 0);
+gui.syntaxHighlight.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.syntaxHighlight.Text = "";
+gui.syntaxHighlight.Name = "SyntaxHighlight";
+
+gui.codeInput = Instance.new("TextBox", gui.editorFrame);
+gui.codeInput.CursorPosition = -1;
+gui.codeInput.Name = "CodeInput";
+gui.codeInput.ZIndex = 2;
+gui.codeInput.BorderSizePixel = 0;
+gui.codeInput.TextSize = 14;
+gui.codeInput.TextColor3 = Color3.fromRGB(255, 255, 255);
+gui.codeInput.BackgroundColor3 = Color3.fromRGB(40, 40, 40);
+gui.codeInput.FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+gui.codeInput.Size = UDim2.new(1, -35, 1, 0);
+gui.codeInput.Position = UDim2.new(0, 35, 0, 0);
+gui.codeInput.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.codeInput.Text = "";
+gui.codeInput.BackgroundTransparency = 1;
+
+gui.editorFrameCorner = Instance.new("UICorner", gui.editorFrame);
+gui.editorFrameCorner.CornerRadius = UDim.new(0, 8);
+
+gui.highlightScript = Instance.new("LocalScript", gui.editorFrame);
+gui.highlightScript.Name = "HighlightScript";
+
+gui.lineNumbers = Instance.new("TextLabel", gui.editorFrame);
+gui.lineNumbers.BorderSizePixel = 0;
+gui.lineNumbers.TextSize = 14;
+gui.lineNumbers.BackgroundColor3 = Color3.fromRGB(30, 30, 30);
+gui.lineNumbers.FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+gui.lineNumbers.TextColor3 = Color3.fromRGB(150, 150, 150);
+gui.lineNumbers.BackgroundTransparency = 0;
+gui.lineNumbers.RichText = true;
+gui.lineNumbers.Size = UDim2.new(0, 35, 1, 0);
+gui.lineNumbers.BorderColor3 = Color3.fromRGB(0, 0, 0);
+gui.lineNumbers.Text = "1";
+gui.lineNumbers.TextXAlignment = Enum.TextXAlignment.Center;
+gui.lineNumbers.TextYAlignment = Enum.TextYAlignment.Top;
+gui.lineNumbers.Name = "LineNumbers";
+
+local function setupDragging()
+    local dragScript = gui.dragScript;
+    local mainFrame = dragScript.Parent;
+    local UserInputService = game:GetService("UserInputService");
+    local isDragging = false;
+    local dragInput = nil;
+    local dragStart = nil;
+    local startPosition = nil;
+    
+    local function updatePosition(input)
+        local delta = input.Position - dragStart
+        mainFrame.Position = UDim2.new(
+            startPosition.X.Scale, startPosition.X.Offset + delta.X,
+            startPosition.Y.Scale, startPosition.Y.Offset + delta.Y
+        )
+    end
+    
+    mainFrame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            isDragging = true
+            dragStart = input.Position
+            startPosition = mainFrame.Position
+    
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    isDragging = false
+                end
+            end)
+        end
+    end)
+    
+    mainFrame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+    
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and isDragging then
+            updatePosition(input)
+        end
+    end)
+end
+task.spawn(setupDragging);
+
+local function setupResizing()
+    local resizeScript = gui.resizeScript;
+    local resizeBar = resizeScript.Parent;
+    local mainFrame = resizeBar.Parent;
+    local executeButton = mainFrame:FindFirstChild("ExecuteButton");
+    local editorFrame = mainFrame:FindFirstChild("EditorFrame");
+    local UserInputService = game:GetService("UserInputService");
+    local RunService = game:GetService("RunService");
+    
+    local isResizing = false;
+    local startMouseY = 0;
+    local startFrameSize = nil;
+    
+    resizeBar.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            isResizing = true
+            startMouseY = UserInputService:GetMouseLocation().Y
+            startFrameSize = mainFrame.Size
+    
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    isResizing = false
+                end
+            end)
+        end
+    end)
+    
+    UserInputService.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            isResizing = false
+        end
+    end)
+    
+    RunService.RenderStepped:Connect(function()
+        if isResizing then
+            local currentMouseY = UserInputService:GetMouseLocation().Y
+            local deltaY = currentMouseY - startMouseY
+    
+            local newHeight = math.max(startFrameSize.Y.Offset + deltaY, 100)
+            mainFrame.Size = UDim2.new(startFrameSize.X.Scale, startFrameSize.X.Offset, startFrameSize.Y.Scale, newHeight)
+            
+            if editorFrame then
+                editorFrame.Size = UDim2.new(1, -20, 1, -80)
+            end
+            
+            if executeButton then
+                executeButton.Position = UDim2.new(0, 10, 1, -40)
+            end
+        end
+    end)
+end
+task.spawn(setupResizing);
+
+local function setupSyntaxHighlighting()
+    local highlightScript = gui.highlightScript;
+    local editorFrame = highlightScript.Parent;
+    local codeInput = editorFrame:WaitForChild("CodeInput");
+    local syntaxHighlight = editorFrame:WaitForChild("SyntaxHighlight");
+    local lineNumbers = editorFrame:WaitForChild("LineNumbers");
+    
+    codeInput.TextTransparency = 1
+    codeInput.ClearTextOnFocus = false
+    codeInput.TextXAlignment = Enum.TextXAlignment.Left
+    codeInput.TextYAlignment = Enum.TextYAlignment.Top
+    codeInput.TextWrapped = false
+    codeInput.MultiLine = true
+    codeInput.PlaceholderText = "Write your Lua code here"
+    codeInput.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+    
+    syntaxHighlight.TextXAlignment = Enum.TextXAlignment.Left
+    syntaxHighlight.TextYAlignment = Enum.TextYAlignment.Top
+    syntaxHighlight.TextWrapped = false
+    syntaxHighlight.RichText = true
+    syntaxHighlight.BackgroundTransparency = 1
+    
+    lineNumbers.TextXAlignment = Enum.TextXAlignment.Center
+    lineNumbers.TextYAlignment = Enum.TextYAlignment.Top
+    
+    local syntaxColors = {
+        keyword = "#569CD6",
+        string = "#CE9178",
+        number = "#B5CEA8",
+        comment = "#6A9955",
+        bracket = "#D4D4D4"
+    }
+    
+    local luaKeywords = {
+        "and", "break", "do", "else", "elseif", "end", "false", "for", "function", 
+        "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", 
+        "true", "until", "while", "continue"
+    }
+    
+    local luaBuiltins = {
+        "print", "require", "wait", "Instance", "pairs", "ipairs", "type", "string", "math", "table"
+    }
+
+    local complete = {
+        "print", "require", "wait", "Instance", "pairs", "ipairs", "type", "string", "math", "table",
+        "coroutine", "debug", "os", "package", "bit32", "utf8", "loadstring", "_G",
+        "continue", "drillyisafatfuck"
+    }
+
+    local function escapePattern(text)
+        return text:gsub("([%%%^%$%(%)%.%[%]%*%+%-%?])", "%%%1")
+    end
+    
+    local function autocomplete(line)
+        local autocompletewithtab = complete
+        local inputText = tostring(line)
+        
+        local matches = {}
+        for _, word in ipairs(autocompletewithtab) do
+            if word:lower():sub(1, #inputText) == inputText:lower() and #inputText > 0 then
+                table.insert(matches, word)
+            end
+        end
+        
+        if #matches > 0 then
+            return matches[1], matches
+        else
+            return nil, {}
+        end
+    end
+    gui.autocompleteLabel = Instance.new("TextLabel", gui.editorFrame)
+    gui.autocompleteLabel.Name = "AutocompleteLabel"
+    gui.autocompleteLabel.BackgroundTransparency = 1
+    gui.autocompleteLabel.TextColor3 = Color3.fromRGB(128, 128, 128)
+    gui.autocompleteLabel.FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+    gui.autocompleteLabel.TextSize = 14
+    gui.autocompleteLabel.Size = UDim2.new(1, -35, 1, 0)
+    gui.autocompleteLabel.Position = UDim2.new(0, 35, 0, 0)
+    gui.autocompleteLabel.TextXAlignment = Enum.TextXAlignment.Left
+    gui.autocompleteLabel.TextYAlignment = Enum.TextYAlignment.Top
+    gui.autocompleteLabel.ZIndex = 1
+    gui.autocompleteLabel.Text = ""
+    gui.autocompleteLabel.Visible = false
+
+    local function smartprocess()
+        local currentText = codeInput.Text
+        local cursorPos = codeInput.CursorPosition
+        
+        local beforeCursor = currentText:sub(1, cursorPos - 1)
+        local currentWord = beforeCursor:match("([%w_]+)$") or ""
+        
+        if #currentWord > 0 then
+            local suggestion, allMatches = autocomplete(currentWord)
+            
+            if suggestion and suggestion ~= currentWord then
+                local completion = suggestion:sub(#currentWord + 1)
+                local beforeText = currentText:sub(1, cursorPos - 1)
+                local afterText = currentText:sub(cursorPos)
+                
+                local displayText = beforeText .. '<font color="rgb(128,128,128)">' .. completion .. '</font><font color="rgb(100,100,255)"> [\\]</font>' .. afterText
+                gui.autocompleteLabel.Text = displayText
+                gui.autocompleteLabel.RichText = true
+                gui.autocompleteLabel.Visible = true
+                
+                gui.autocompleteLabel:SetAttribute("CurrentSuggestion", suggestion)
+                gui.autocompleteLabel:SetAttribute("CurrentWord", currentWord)
+                
+                task.spawn(function()
+                    task.wait(5)
+                    if gui.autocompleteLabel.Visible then
+                        gui.autocompleteLabel.Visible = false
+                    end
+                end)
+            else
+                gui.autocompleteLabel.Visible = false
+            end
+        else
+            gui.autocompleteLabel.Visible = false
+        end
+    end 
+
+    local function applySyntaxHighlighting(text)
+        if text == "" then
+            return ""
+        end
+        
+        text = text:gsub("<", "&lt;"):gsub(">", "&gt;")
+    
+        text = text:gsub("(%-%-%[%[.-%]%])", '<font color="'..syntaxColors.comment..'">%1</font>')
+        text = text:gsub("(%-%-[^\n]*)", '<font color="'..syntaxColors.comment..'">%1</font>')
+    
+        text = text:gsub('(".-")', '<font color="'..syntaxColors.string..'">%1</font>')
+        text = text:gsub("('.-')", '<font color="'..syntaxColors.string..'">%1</font>')
+        text = text:gsub("(%[%[.-%]%])", '<font color="'..syntaxColors.string..'">%1</font>')
+    
+        text = text:gsub("(%f[%w])(0x%x+)", '<font color="'..syntaxColors.number..'">%2</font>')
+        text = text:gsub("(%f[%w])(%d+%.?%d*)", '<font color="'..syntaxColors.number..'">%2</font>')
+    
+        for _, word in ipairs(luaKeywords) do
+            text = text:gsub("(%f[%w])("..escapePattern(word)..")(%f[%W])", 
+                "%1<font color=\""..syntaxColors.keyword.."\">%2</font>%3")
+        end
+    
+        for _, fn in ipairs(luaBuiltins) do
+            text = text:gsub("(%f[%w])("..escapePattern(fn)..")(%f[%W])", 
+                "%1<font color=\""..syntaxColors.keyword.."\">%2</font>%3")
+        end
+    
+        text = text:gsub("([%(%)%[%]{}])", '<font color="'..syntaxColors.bracket..'">%1</font>')
+    
+        return text
+    end
+    
+    local function updateLineNumbers(text)
+        local lines = {}
+        local lineCount = 1
+        
+        for line in (text .. "\n"):gmatch("(.-)\n") do
+            table.insert(lines, tostring(lineCount))
+            lineCount = lineCount + 1
+        end
+        
+        if #lines == 0 then
+            lines = {"1"}
+        end
+        
+        lineNumbers.Text = table.concat(lines, "\n")
+    end
+    
+
+    
+    local UserInputService = game:GetService("UserInputService")
+    
+    local function applyAutocomplete()
+        local suggestion = gui.autocompleteLabel:GetAttribute("CurrentSuggestion")
+        local currentWord = gui.autocompleteLabel:GetAttribute("CurrentWord")
+        
+        if suggestion and currentWord and gui.autocompleteLabel.Visible then
+            local currentText = codeInput.Text
+            local cursorPos = codeInput.CursorPosition
+            local beforeCursor = currentText:sub(1, cursorPos - 1)
+            local afterCursor = currentText:sub(cursorPos)
+            
+            local newBeforeCursor = beforeCursor:gsub(escapePattern(currentWord) .. "$", suggestion)
+            local newText = newBeforeCursor .. afterCursor
+            
+            codeInput.Text = newText
+            codeInput.CursorPosition = #newBeforeCursor + 1
+            
+            gui.autocompleteLabel.Visible = false
+            return true
+        end
+        return false
+    end
+    
+    UserInputService.InputBegan:Connect(function(input, gameProcessed)
+        if gameProcessed then return end
+        
+        if input.KeyCode == Enum.KeyCode.Backslash and codeInput:IsFocused() then
+            local suggestion = gui.autocompleteLabel:GetAttribute("CurrentSuggestion")
+            local currentWord = gui.autocompleteLabel:GetAttribute("CurrentWord")
+            
+            if suggestion and currentWord and gui.autocompleteLabel.Visible then
+                applyAutocomplete()
+            end
+        elseif input.KeyCode == Enum.KeyCode.Space and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) and codeInput:IsFocused() then
+            if gui.autocompleteLabel.Visible then
+                applyAutocomplete()
+            end
+        elseif input.KeyCode == Enum.KeyCode.Return and codeInput:IsFocused() then
+            if gui.autocompleteLabel.Visible then
+                applyAutocomplete()
+            end
+        end
+    end)
+    
+    local lastText = codeInput.Text
+    local isApplyingAutocomplete = false
+    
+    codeInput:GetPropertyChangedSignal("Text"):Connect(function()
+        if isApplyingAutocomplete then return end
+        
+        local currentText = codeInput.Text
+        
+        if currentText ~= lastText and gui.autocompleteLabel.Visible then
+            local suggestion = gui.autocompleteLabel:GetAttribute("CurrentSuggestion")
+            local currentWord = gui.autocompleteLabel:GetAttribute("CurrentWord")
+            
+            if #currentText > #lastText and currentText:sub(-1) == "\\" and suggestion and currentWord then
+                isApplyingAutocomplete = true
+                local textWithoutBackslash = currentText:sub(1, -2)
+                codeInput.Text = textWithoutBackslash
+                
+                task.spawn(function()
+                    task.wait(0.01)
+                    applyAutocomplete()
+                    isApplyingAutocomplete = false
+                end)
+                return
+            end
+        end
+        
+        lastText = currentText
+        syntaxHighlight.Text = applySyntaxHighlighting(currentText)
+        updateLineNumbers(currentText)
+        smartprocess()
+    end)
+    
+    updateLineNumbers(codeInput.Text)
+    syntaxHighlight.Text = applySyntaxHighlighting(codeInput.Text)
+    
+    codeInput:GetPropertyChangedSignal("CursorPosition"):Connect(function()
+        smartprocess()
+    end)
+end
+task.spawn(setupSyntaxHighlighting);
+
+local function setupCodeExecution()
+    local executeScript = gui.executeScript;
+    local executeButton = executeScript.Parent;
+    local codeInput = executeButton.Parent:WaitForChild("EditorFrame"):WaitForChild("CodeInput");
+    
+    executeButton.MouseButton1Click:Connect(function()
+        local luaCode = codeInput.Text
+        
+        local executionSuccess, executionError = pcall(function()
+            loadstring(luaCode)()
+        end)
+        
+        if not executionSuccess then
+            warn("Code execution failed: " .. tostring(executionError))
+        end
+    end)
+end
+task.spawn(setupCodeExecution);
+
+return gui.screenGui;
